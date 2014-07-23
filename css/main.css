@@ -145,10 +145,12 @@ img {
 }
 .btn,
 .form-input {
+  display: inline-block;
   font-family: inherit;
+  outline: none;
+  border: none;
 }
 .form-input {
-  outline: none;
   background: #a19d99;
   border: 1px solid #fff;
 }
@@ -181,9 +183,8 @@ img {
 }
 .btn {
   text-align: center;
-  outline: none;
-  border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 .btn--submit {
   background: -webkit-linear-gradient(top, #01cdde, #01adc8);
@@ -204,12 +205,16 @@ img {
 .btn--lg {
   height: 67px;
   height: 4.1875rem;
+  padding: 15px 20px;
+  padding: 0.9375rem 1.25rem;
   font-size: 22px;
   font-size: 1.375rem;
 }
 .btn--md {
   height: 47px;
   height: 2.9375rem;
+  padding: 13px 20px;
+  padding: 0.8125rem 1.25rem;
   font-size: 14px;
   font-size: 0.875rem;
 }
@@ -315,11 +320,6 @@ img {
   background-size: cover;
   border-top: 2px solid #faeef1;
 }
-.b-clients {
-  padding: 80px 0;
-  padding: 5rem 0;
-  background: #f0f0f0;
-}
 .b-confidence {
   padding: 90px 0;
   padding: 5.625rem 0;
@@ -327,14 +327,55 @@ img {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+/*@media only screen and (min-width : 768px) and (max-width : 960px)
+        &__slider
+            width 240px * 3;
+    
+    @media only screen and (min-width : 480px) and (max-width : 768px)
+        &__slider
+            width 240px * 2;
+
+    @media only screen and (min-width : 240px) and (max-width : 480px)
+        &__slider
+            width 240px;*/
 }
 .b-confidence__heading {
   color: #fff;
 }
+.b-confidence__slider {
+  position: relative;
+  margin: 0 auto;
+}
 .b-confidence__item {
+  position: relative;
+  float: left;
   max-width: 620px;
   background: #dadee2;
-  display: inline-block;
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  -moz-transition: -moz-transform 300ms ease-out;
+  -o-transition: -o-transform 300ms ease-out;
+  -ms-transition: -ms-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  -webkit-transform: translateX(80%) scale(0.8);
+  -moz-transform: translateX(80%) scale(0.8);
+  -o-transform: translateX(80%) scale(0.8);
+  -ms-transform: translateX(80%) scale(0.8);
+  transform: translateX(80%) scale(0.8);
+}
+.b-confidence__item.active {
+  z-index: 10;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.b-confidence__item.active + li {
+  -webkit-transform: translateX(-80%) scale(0.8);
+  -moz-transform: translateX(-80%) scale(0.8);
+  -o-transform: translateX(-80%) scale(0.8);
+  -ms-transform: translateX(-80%) scale(0.8);
+  transform: translateX(-80%) scale(0.8);
 }
 .b-confidence__item__image {
   display: block;
@@ -356,7 +397,7 @@ img {
   background-size: cover;
 }
 .b-order-form {
-  width: 41.33333336666667%;
+  width: 41.222222666666674%;
   padding: 45px 30px;
   padding: 2.8125rem 1.875rem;
   text-align: center;
@@ -408,7 +449,7 @@ img {
   position: relative;
 }
 .b-order__promo {
-  width: 58.000000033333336%;
+  width: 57.88888933333334%;
   float: left;
   margin: 70px 0 0;
   margin: 4.375rem 0 0;
@@ -449,13 +490,125 @@ img {
   z-index: 100;
   float: right;
 }
+.b-pagination {
+  text-align: center;
+  zoom: 1;
+}
+.b-pagination:before,
+.b-pagination:after {
+  content: "";
+  display: table;
+}
+.b-pagination:after {
+  clear: both;
+}
+.b-pagination--dark .b-pagination__next {
+  background-position: -42px -47px;
+}
+.b-pagination--dark .b-pagination__prev {
+  background-position: 0 -47px;
+}
+.b-pagination--light .b-pagination__next {
+  background-position: -42px 0;
+}
+.b-pagination--light .b-pagination__prev {
+  background-position: 0 0;
+}
+.b-pagination__next,
+.b-pagination__prev {
+  display: inline-block;
+  background: url("../img/slider-arrows.png") no-repeat;
+  z-index: 9999;
+  position: absolute;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 28px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+}
+.b-pagination__next.disabled,
+.b-pagination__prev.disabled {
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: alpha(opacity=40);
+  cursor: default;
+}
+.b-pagination__next:not(.disabled):active,
+.b-pagination__prev:not(.disabled):active {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.b-pagination__prev {
+  left: -50px;
+}
+.b-pagination__next {
+  right: -50px;
+}
+.b-partners {
+  padding: 80px 0;
+  padding: 5rem 0;
+  background: #f0f0f0;
+}
+.b-partners__slider {
+  position: relative;
+  margin: 0 auto;
+}
+.b-partners__slider__wrapper {
+  height: 190px;
+}
+.b-partners__item {
+  float: left;
+  width: 220px;
+  height: 190px;
+  margin: 0 10px;
+}
+.b-partners__item a,
+.b-partners__item img {
+  display: block;
+}
+@media only screen and (min-width : 768px) and (max-width : 960px) {
+  .b-partners__slider {
+    width: 720px;
+  }
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+  .b-partners__slider {
+    width: 480px;
+  }
+}
+@media only screen and (min-width : 240px) and (max-width : 480px) {
+  .b-partners__slider {
+    width: 240px;
+  }
+}
 .b-plans {
   padding: 70px 0;
   padding: 4.375rem 0;
   background: #f0f0f0;
+/* Таблица
+    ------------------------------------------------------- */
+/* Цены
+    ------------------------------------------------------- */
+/* Кнопка заказа
+    ------------------------------------------------------- */
+/* Наличие/отстуствие опции
+    ------------------------------------------------------- */
 }
 .b-plans__table {
   width: 100%;
+/* Шапка
+        ------------------------------------------------------- */
+/* Опции тарифов
+        ------------------------------------------------------- */
+/* Цены на тарифы
+        ------------------------------------------------------- */
 }
 .b-plans__table td + td,
 .b-plans__table th + th {
@@ -488,36 +641,63 @@ img {
   font-size: 1.375rem;
   text-transform: uppercase;
 }
-.b-plans__table__main {
+.b-plans__table__options {
   background: #fff;
 }
-.b-plans__table__main tr + tr td:first-child {
+.b-plans__table__options tr + tr td:first-child {
   border-top: 1px solid #f0f0f0;
 }
-.b-plans__table__main td {
+.b-plans__table__options td {
   padding: 20px 15px;
   padding: 1.25rem 0.9375rem;
   font-size: 18px;
   font-size: 1.125rem;
 }
-.b-plans__table__main td.plan {
+.b-plans__table__options td.plan {
   text-align: center;
 }
-.b-plans__table__main td.option {
+.b-plans__table__options td.option {
   text-align: left;
 }
-.b-plans__table__bottom {
+.b-plans__table__prices {
   background: #f0f5f6;
 }
-.b-plans__table__bottom td {
+.b-plans__table__prices td {
   padding: 35px 0;
   padding: 2.1875rem 0;
   text-align: center;
 }
-.b-plans__table__bottom td.option {
+.b-plans__table__prices td.option {
   font-size: 22px;
   font-size: 1.375rem;
   text-transform: uppercase;
+}
+.b-plans__price {
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+.b-plans__price small {
+  vertical-align: top;
+  font-size: 17px;
+  font-size: 1.0625rem;
+}
+.b-plans__order-btn {
+  margin: 20px 0 0;
+}
+.b-plans__option,
+.b-plans__option--yes,
+.b-plans__option--no {
+  display: inline-block;
+  background: url("../img/b-plans-options.png") no-repeat;
+}
+.b-plans__option--yes {
+  width: 25px;
+  height: 23px;
+}
+.b-plans__option--no {
+  width: 25px;
+  height: 20px;
+  background-position: 0 -64px;
 }
 .b-profit {
   padding: 90px 0;
@@ -567,8 +747,58 @@ img {
   text-transform: uppercase;
 }
 .b-promo {
-  padding: 60px 0;
-  padding: 3.75rem 0;
+  padding: 50px 0;
+  padding: 3.125rem 0;
+}
+.b-promo__main,
+.b-promo__form {
+  display: table-cell;
+  vertical-align: middle;
+}
+.b-promo__main {
+  width: 57.88888933333334%;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+/* Заголовок
+        ------------------------------------------------ */
+/* Слоган и текст
+        ------------------------------------------------ */
+}
+.b-promo__main__heading {
+  margin: 0 0 15px;
+  margin: 0 0 0.9375rem;
+  font-size: 22px;
+  font-size: 1.375rem;
+  color: #dc2555;
+}
+.b-promo__main__slogan,
+.b-promo__main__text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+.b-promo__main__text {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.b-promo__main__slogan {
+  margin: 0 0 25px;
+  margin: 0 0 1.5625rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+.b-promo__main__slogan strong {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #dc2555;
+}
+.b-promo__main__slogan small {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  text-transform: none;
+  vertical-align: top;
 }
 .b-reviews {
   padding: 90px 0;
@@ -654,6 +884,24 @@ img {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+/*@media only screen and (min-width : 768px) and (max-width : 960px)
+        &__slider
+            width 240px * 3;
+    
+    @media only screen and (min-width : 480px) and (max-width : 768px)
+        &__slider
+            width 240px * 2;
+
+    @media only screen and (min-width : 240px) and (max-width : 480px)
+        &__slider
+            width 240px;*/
+}
+.b-salons__slider {
+  position: relative;
+  margin: 0 auto;
+}
+.b-salons__slider__wrapper {
+  height: 400px;
 }
 .b-salons__item {
   width: 300px;
@@ -783,6 +1031,8 @@ img {
     ------------------------------------------------ */
 /* Местоположение
     ------------------------------------------------ */
+/* Контакты
+    ------------------------------------------------ */
 }
 .b-top__logo,
 .b-top__location,
@@ -791,7 +1041,6 @@ img {
   vertical-align: middle;
 }
 .b-top__logo {
-  width: 41.33333336666667%;
   padding-left: 90px;
   padding-left: 5.625rem;
   position: relative;
@@ -816,6 +1065,7 @@ img {
   font-size: 13px;
   font-size: 0.8125rem;
   font-style: italic;
+  font-weight: normal;
   color: #bcbcbc;
 }
 .b-top__logo__text {
@@ -827,17 +1077,37 @@ img {
   border-top: 1px solid #575455;
 }
 .b-top__location {
-  width: 33.000000033333336%;
   text-align: center;
 }
 .b-top__contacts {
-  width: 24.6666667%;
   text-align: right;
 }
 .b-top__contacts__phone {
   font-family: 'Roboto Slab', sans-serif;
   font-size: 28px;
   font-size: 1.75rem;
+}
+@media only screen and (min-width: 850px) {
+  .b-top__logo {
+    width: 49.555556%;
+  }
+  .b-top__location {
+    width: 24.555556%;
+  }
+  .b-top__contacts {
+    width: 24.555556%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .b-top__logo {
+    width: 49.555556%;
+  }
+  .b-top__location {
+    width: 24.555556%;
+  }
+  .b-top__contacts {
+    width: 24.555556%;
+  }
 }
 @media only screen and (max-width : 960px) {
   .container {

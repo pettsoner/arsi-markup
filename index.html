@@ -44,7 +44,13 @@
     
         <div class="b-promo">
             <div class="container">
-                <form class="b-order-form b-order-form--light b-order__form">
+                <div class="b-promo__main">
+                    <h1 class="b-promo__main__heading">Франчайзинг маникюрных салонов «АРСИ»</h1>
+                    <p class="b-promo__main__slogan">Наслаждайтесь красивым бизнесом<br> и красивыми пальчиками в своем<br> салоне красоты, зарабатывая<br>от <strong>100 000 <small>руб</small></strong> в месяц.</p>
+                    <p class="b-promo__main__text">Простая пошаговая инструкция, 100% работающая<br> система по запуску высокорентабельного<br>бизнеса с нуля!</p>
+                </div>
+
+                <form class="b-order-form b-order-form--light b-promo__form">
                     <h2 class="b-order-form__heading">Оставить заявку<br>прямо сейчас!</h2>
 
                     <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
@@ -103,31 +109,35 @@
         <div class="container">
             <h2 class="heading--section b-salons__heading">Салоны «Арси Маникюр и Педикюр»</h2>
             
-            <ul class="b-salons__slider">
-                <li class="b-salons__item">
-                    <img src="img/b-salons__item-1.jpg" alt="" class="b-salons__item__image">
+            <div class="b-salons__slider">
+                <div class="b-salons__slider__wrapper" id="b-salons__slider__wrapper">
+                    <ul>
+                        <li class="b-salons__item">
+                            <img src="img/b-salons__item-1.jpg" alt="" class="b-salons__item__image">
 
-                    <div class="b-salons__item__name">Салон «Арси радость жизни»</div>
+                            <div class="b-salons__item__name">Салон «Арси радость жизни»</div>
 
-                    <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
-                </li>
+                            <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
+                        </li>
 
-                <li class="b-salons__item">
-                    <img src="img/b-salons__item-1.jpg" alt="" class="b-salons__item__image">
+                        <li class="b-salons__item">
+                            <img src="img/b-salons__item-1.jpg" alt="" class="b-salons__item__image">
 
-                    <div class="b-salons__item__name">Салон «Арси природа»</div>
+                            <div class="b-salons__item__name">Салон «Арси природа»</div>
 
-                    <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
-                </li>
+                            <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
+                        </li>
 
-                <li class="b-salons__item">
-                    <img src="img/b-salons__item-1.jpg" alt="" class="b-salons__item__image">
+                        <li class="b-salons__item">
+                            <img src="img/b-salons__item-1.jpg" alt="" class="b-salons__item__image">
 
-                    <div class="b-salons__item__name">Салон «Арси Уларси»</div>
+                            <div class="b-salons__item__name">Салон «Арси Уларси»</div>
 
-                    <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
-                </li>
-            </ul>
+                            <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -238,87 +248,99 @@
                     </tr>
                 </thead>
 
-                <tbody class="b-plans__table__main">
+                <tbody class="b-plans__table__options">
                     <tr>
                         <td class="option">1. Подробный биз-<br>нес-план</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">2. Бренд бук</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">2. Бренд бук</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">3. Регистрация и бухгал-<br>терское сопровождение<br> ИП для ООО</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">3. Регистрация и бухгал-<br>терское сопровождение<br> ИП для ООО</td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">4. Подбор помещения</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">4. Подбор помещения</td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">5. Подбор и обучение<br> персонала</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">5. Подбор и обучение<br> персонала</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">6. Облачная система<br> учета и контроля<br>под ключ с видеонаблю-<br>дением</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">6. Облачная система<br> учета и контроля<br>под ключ с видеонаблю-<br>дением</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">7. Индивидуальный<br> маркетинговый план<br> при открытии</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">7. Индивидуальный<br> маркетинговый план<br> при открытии</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">8. Индивидуальный<br> дизайн макет оформле-<br>ния «АРСИ» салона</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">8. Индивидуальный<br> дизайн макет оформле-<br>ния «АРСИ» салона</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">9. Корпоративный сайт</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">9. Корпоративный сайт</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
                 </tbody>
 
-                <tbody class="b-plans__table__bottom">
+                <tbody class="b-plans__table__prices">
                     <tr>
-                        <td class="option">Цена</th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
-                        <td class="plan"></th>
+                        <td class="option">Цена</td>
+                        <td class="plan">
+                            <div class="b-plans__price">3 500 <small>руб</small></div>
+                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn">Заказать</a>
+                        </td>
+                        <td class="plan">
+                            <div class="b-plans__price">10 500 <small>руб</small></div>
+                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn">Заказать</a>
+                        </td>
+                        <td class="plan">
+                            <div class="b-plans__price">500 <small>руб</small></div>
+                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn">Заказать</a>
+                        </td>
+                        <td class="plan">
+                            <div class="b-plans__price">25 500 <small>руб</small></div>
+                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn">Заказать</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -330,13 +352,42 @@
     <section class="b-confidence">
         <div class="container">
             <h2 class="heading--section b-confidence__heading">Почему нам доверяют?</h2>
+            
+            <div class="b-confidence__slider">
+                <div class="b-confidence__slider__wrapper" id="b-confidence__slider__wrapper">
+                    <ul>
+                        <li class="b-confidence__item">
+                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
 
-            <div class="b-confidence__item">
-                <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
+                        </li>
 
-                <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
-            </div>
-        </div>
+                        <li class="b-confidence__item">
+                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
+                        </li>
+
+                        <li class="b-confidence__item">
+                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
+                        </li>
+
+                        <li class="b-confidence__item">
+                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
+                        </li>
+                    </ul>
+
+                    <div class="b-pagination b-pagination--light b-confidence__pagination">
+                        <a href="#" class="b-pagination__prev"></a>
+                        <a href="#" class="b-pagination__next"></a>
+                    </div>
+                </div><!-- /.b-confidence__slider__wrapper -->
+            </div><!-- /.b-confidence__slider -->
+        </div><!-- /.container -->
     </section>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -463,9 +514,36 @@
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     
-    <section class="b-clients">
+    <section class="b-partners">
         <div class="container">
-            <h2 class="heading--section b-clients__heading">Наши ключевые партнеры</h2>
+            <h2 class="heading--section b-partners__heading">Наши ключевые партнеры</h2>
+
+            <div class="b-partners__slider">
+                <div class="b-partners__slider__wrapper" id="b-partners__slider__wrapper">
+                    <ul>
+                        <li class="b-partners__item">
+                            <a href=""><img src="img/b-partners__item-1.jpg" alt="" class="b-partners__item__image"></a>
+                        </li>
+                        <li class="b-partners__item">
+                            <a href="#"><img src="img/b-partners__item-2.jpg" alt="" class="b-partners__item__image"></a>
+                        </li>
+                        <li class="b-partners__item">
+                            <a href="#"><img src="img/b-partners__item-3.jpg" alt="" class="b-partners__item__image"></a>
+                        </li>
+                        <li class="b-partners__item">
+                            <a href="#"><img src="img/b-partners__item-4.jpg" alt="" class="b-partners__item__image"></a>
+                        </li>
+                        <li class="b-partners__item">
+                            <a href="#"><img src="img/b-partners__item-4.jpg" alt="" class="b-partners__item__image"></a>
+                        </li>
+                    </ul>
+                </div><!-- /.b-partners__slider__wrapper -->
+
+                <div class="b-pagination b-pagination--dark b-partners__pagination">
+                    <a href="#" class="b-pagination__prev"></a>
+                    <a href="#" class="b-pagination__next"></a>
+                </div>
+            </div><!-- /.b-partners__slider -->
         </div>
     </section>
 

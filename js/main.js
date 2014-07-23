@@ -20,33 +20,36 @@ $(document).ready(function() {
         //aspectRatio: true
     });
 
-    /* Слайдер сертификатов
+    /* Слайдер доверия
     ------------------------------------------------------------------------------- */
 
-    /*var $bCertificatesSlider = $('.b-certificates__slider');
-    var certificatesSlider = new Sly($bCertificatesSlider.find('.b-certificates__slider__wrapper'), {
+    var $bConfidenceSlider = $('.b-confidence__slider');
+    var confidenceSlider = new Sly($bConfidenceSlider.find('.b-confidence__slider__wrapper'), {
         horizontal: 1,
         itemNav: 'basic',
         touchDragging: 1,
         speed: 400,
         dynamicHandle: 1,
-        nextPage: $bCertificatesSlider.find('.b-pagination__next'),
-        prevPage: $bCertificatesSlider.find('.b-pagination__prev'),
-    }).init();*/
+        itemNav: 'forceCentered',
+        smart: 1,
+        activateMiddle: 1,
+        nextPage: $bConfidenceSlider.find('.b-pagination__next'),
+        prevPage: $bConfidenceSlider.find('.b-pagination__prev'),
+    }).init();
 
-    /* Слайдер клиентов
+    /* Слайдер партнеров
     ------------------------------------------------------------------------------- */
 
-    /*var $bClientsSlider = $('.b-clients__slider');
-    var clientsSlider = new Sly($bClientsSlider.find('.b-clients__slider__wrapper'), {
+    var $bPartnersSlider = $('.b-partners__slider');
+    var partnersSlider = new Sly($bPartnersSlider.find('.b-partners__slider__wrapper'), {
         horizontal: 1,
         itemNav: 'basic',
         touchDragging: 1,
         speed: 400,
         dynamicHandle: 1,
-        nextPage: $bClientsSlider.find('.b-pagination__next'),
-        prevPage: $bClientsSlider.find('.b-pagination__prev'),
-    }).init();*/
+        nextPage: $bPartnersSlider.find('.b-pagination__next'),
+        prevPage: $bPartnersSlider.find('.b-pagination__prev'),
+    }).init();
 
     /* Обработка отправки форм
     ------------------------------------------------------------------------------- */
