@@ -23,21 +23,22 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
     <header class="b-header">
-        <div class="b-top">
+        <div class="b-header__top">
             <div class="container">
-                <div class="b-top__logo">
-                    <img src="img/b-top__logo.png" alt="" class="b-top__logo__image">
+                <div class="b-logo b-logo--header b-header__top__logo b-header__top__col">
+                    <img src="img/b-logo.png" alt="" class="b-logo__image">
 
-                    <div class="b-top__logo__company">RC Manicure <small>&amp; Pedicure</small></div>
+                    <div class="b-logo__company">RC Manicure <small>&amp; Pedicure</small></div>
 
-                    <p class="b-top__logo__text">Международная сеть маникюрных салонов</p>
+                    <p class="b-logo__text">Международная сеть маникюрных салонов</p>
                 </div>
 
-                <div class="b-top__location">Ваш город: <a href="#" class="link link--dashed">Москва</a></div>
+                <div class="b-header__top__location b-header__top__col">Ваш город: <a href="#" class="link link--dashed">Москва</a></div>
 
-                <div class="b-top__contacts">
-                    <div class="b-top__contacts__phone">8 800 700 56 80</div>
-                    <a href="#" class="link link--dashed b-top__contacts__link">Заказать звонок</a>
+                <div class="b-header__top__contacts b-contacts b-header__top__col">
+                    <div class="b-contacts__phone">8 800 700 56 80</div>
+
+                    <a href="#" class="link link--dashed">Заказать звонок</a>
                 </div>
             </div> 
         </div>
@@ -135,7 +136,20 @@
 
                             <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
                         </li>
+
+                        <li class="b-salons__item">
+                            <img src="img/b-salons__item-1.jpg" alt="" class="b-salons__item__image">
+
+                            <div class="b-salons__item__name">Салон «Арси Уларси»</div>
+
+                            <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
+                        </li>
                     </ul>
+
+                    <div class="b-pagination b-pagination--light b-salons__pagination">
+                        <a href="#" class="b-pagination__prev"></a>
+                        <a href="#" class="b-pagination__next"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -574,9 +588,32 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
     <footer class="b-footer">
-        <div class="container">
-           
-        </div>
+            <div class="b-footer__main">
+               <div class="container">
+                    <div class="b-logo b-logo--footer b-footer__logo b-footer__col">
+                        <div class="b-logo__company">RC Manicure <small>&amp; Pedicure</small></div>
+
+                        <p class="b-logo__text">Международная сеть маникюрных салонов</p>
+                    </div><!-- /.b-logo.b-footer__logo -->
+
+                    <div class="b-footer__agreement b-footer__col">
+                        <a href="#" class="link link--solid">Соглашение об обработке персональных данных</a>
+                    </div><!-- /.b-footer__agreement -->
+
+                    <div class="b-footer__contacts b-footer__col b-contacts">
+                        <div class="b-contacts__phone">8 800 700 56 80</div>
+                        
+                        <a href="#" class="link link--dashed">Заказать звонок</a>
+                    </div><!-- /.b-contacts.b-footer__contacts -->
+                </div><!-- /.container -->
+            </div><!-- /.b-footer__main -->
+
+            <div class="b-footer__bottom">
+                <div class="container">
+                    <div class="b-footer__bottom__copy">© RC Beautiful, 2008—2014</div>
+                    <div class="b-footer__bottom__dev">Сделано в <a href="#" class="link link--solid">Tesla Marketing</a></div>
+                </div>
+            </div> 
     </footer>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

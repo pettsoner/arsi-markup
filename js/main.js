@@ -37,6 +37,7 @@ $(document).ready(function() {
         prevPage: $bConfidenceSlider.find('.b-pagination__prev'),
     }).init();
 
+
     /* Слайдер партнеров
     ------------------------------------------------------------------------------- */
 
@@ -49,6 +50,20 @@ $(document).ready(function() {
         dynamicHandle: 1,
         nextPage: $bPartnersSlider.find('.b-pagination__next'),
         prevPage: $bPartnersSlider.find('.b-pagination__prev'),
+    }).init();
+
+    /* Слайдер салонов
+    ------------------------------------------------------------------------------- */
+
+    var $bSalonsSlider = $('.b-salons__slider');
+    var salonsSlider = new Sly($bSalonsSlider.find('.b-salons__slider__wrapper'), {
+        horizontal: 1,
+        itemNav: 'basic',
+        touchDragging: 1,
+        speed: 400,
+        dynamicHandle: 1,
+        nextPage: $bSalonsSlider.find('.b-pagination__next'),
+        prevPage: $bSalonsSlider.find('.b-pagination__prev'),
     }).init();
 
     /* Обработка отправки форм
@@ -71,11 +86,19 @@ $(document).ready(function() {
 
         $(window).resize(function() {
 
-            if ($(window).width() > 768 || $(window).height() > 450) {
+            var $this = $(this);
+
+            confidenceSlider.reload();
+
+            if ($this.width < 960) {
+                $('.b-plans td, th').filter(':not(:eq(1))').hide();
+            }
+
+            if ($this.width() > 768 || $this.height() > 450) {
                 /*$header.css({ visibility: 'hidden'});
                 $fixedHeader.show();*/
 
-                $header.height($(window).height());
+                //$header.height($(window).height());
 
             } else {
                 /*$header.css({ visibility: 'visible'});
