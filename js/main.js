@@ -74,39 +74,55 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    /* Скроллинг
-    ------------------------------------------------------------------------------- */
-
     /* Шапка
     ------------------------------------------------------------------------------- */
 
-    (function() {
-        var $header      = $('.b-header');
-            //$fixedHeader = $header.clone().appendTo('body').addClass('b-header--fixed');
+    var $header = $('.b-header');
+        //$fixedHeader = $header.clone().appendTo('body').addClass('b-header--fixed');
 
-        $(window).resize(function() {
+    $(window).resize(function() {
 
-            var $this = $(this);
+        var $this = $(this);
 
-            confidenceSlider.reload();
+        confidenceSlider.reload();
 
-            if ($this.width < 960) {
-                $('.b-plans td, th').filter(':not(:eq(1))').hide();
-            }
+        /*if ($this.width < 960) {
+            $('.b-plans td, th').filter(':not(:eq(1))').hide();
+        }
+*/
+        if ($this.width() > 768 || $this.height() > 450) {
+            /*$header.css({ visibility: 'hidden'});
+            $fixedHeader.show();*/
 
-            if ($this.width() > 768 || $this.height() > 450) {
-                /*$header.css({ visibility: 'hidden'});
-                $fixedHeader.show();*/
+            //$header.height($(window).height());
 
-                //$header.height($(window).height());
+        } else {
+            /*$header.css({ visibility: 'visible'});
+            $fixedHeader.hide();*/
+        }
 
-            } else {
-                /*$header.css({ visibility: 'visible'});
-                $fixedHeader.hide();*/
-            }
+    }).trigger('resize');
 
-        }).trigger('resize');
+    /* Тарифы
+    ------------------------------------------------------------------------------- */
 
-   })();
+    var $plans            = $('.b-plans .container'),
+        $plansTable       = $('.b-plans__table'),
+        $plansTableHeader = $plansTable.find('.b-plans__table__top th:not(:first)');
 
+    $plansTableHeader.each(function(key) {
+        var $table = $plansTable.clone();
+
+        $table.removeClass('b-plans__table--full').addClass('b-plans__table--simple');
+        
+        $table.find('.b-plans__table__top, .b-plans__table__options tr, .b-plans__table__prices').each(function() {
+            $(this).find('.plan:not(:eq(' + key + '))').remove();
+        });
+
+        $plans.append($table);
+    });
+
+    /*$(window).resize(function(e) {
+
+    });*/
 });

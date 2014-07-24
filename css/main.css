@@ -428,6 +428,14 @@ img {
   .b-confidence__item {
     width: 300px;
   }
+  .b-confidence .b-pagination {
+    padding: 20px 0 0;
+  }
+  .b-confidence .b-pagination__prev,
+  .b-confidence .b-pagination__next {
+    position: static;
+    margin: 0 10px;
+  }
 }
 .b-contacts {
   text-align: right;
@@ -705,6 +713,7 @@ img {
   float: right;
 }
 .b-pagination {
+  clear: both;
   text-align: center;
   zoom: 1;
 }
@@ -813,6 +822,14 @@ img {
   .b-partners__slider {
     width: 240px;
   }
+  .b-partners .b-pagination {
+    padding: 20px 0 0;
+  }
+  .b-partners .b-pagination__prev,
+  .b-partners .b-pagination__next {
+    position: static;
+    margin: 0 10px;
+  }
 }
 .b-plans {
   padding: 70px 0;
@@ -830,12 +847,16 @@ img {
 }
 .b-plans__table {
   width: 100%;
+  line-height: 1.4;
 /* Шапка
         ----------------------------------------------------------------- */
 /* Опции тарифов
         ----------------------------------------------------------------- */
 /* Цены на тарифы
         ----------------------------------------------------------------- */
+}
+.b-plans__table--simple {
+  display: none;
 }
 .b-plans__table td + td,
 .b-plans__table th + th {
@@ -855,15 +876,15 @@ img {
   text-align: center;
 }
 .b-plans__table__top th.plan {
-  width: 178px;
-  width: 11.125rem;
+  width: 180px;
+  width: 11.25rem;
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: bold;
 }
 .b-plans__table__top th.option {
-  width: 240px;
-  width: 15rem;
+  width: 250px;
+  width: 15.625rem;
   font-size: 22px;
   font-size: 1.375rem;
   text-transform: uppercase;
@@ -926,9 +947,20 @@ img {
   height: 20px;
   background-position: 0 -64px;
 }
-@media only screen and (max-width: 960px) {
-  .b-plans {
-    visibility: none;
+@media only screen and (max-width: 700px) {
+  .b-plans__table {
+    margin: 0 auto;
+    table-layout: fixed;
+  }
+  .b-plans__table--full {
+    display: none;
+  }
+  .b-plans__table--simple {
+    display: table;
+  }
+  .b-plans__table--simple + .b-plans__table--simple {
+    margin-top: 15px;
+    margin-top: 0.9375rem;
   }
 }
 .b-profit {
@@ -1042,8 +1074,7 @@ img {
 }
 .b-reviews__item {
   zoom: 1;
-/* Перевернутый 
-        ----------------------------------------------------- */
+/* ---------------------------------------------------------------- */
 }
 .b-reviews__item:before,
 .b-reviews__item:after {
@@ -1055,11 +1086,14 @@ img {
 }
 .b-reviews__item + .b-reviews__item {
   margin-top: 100px;
+  margin-top: 6.25rem;
 }
 .b-reviews__item__main {
   padding: 25px;
+  padding: 1.5625rem;
   background: #fff;
   font-size: 18px;
+  font-size: 1.125rem;
   -webkit-box-shadow: 0 0 10px #ccc;
   box-shadow: 0 0 10px #ccc;
   overflow: hidden;
@@ -1067,18 +1101,22 @@ img {
 .b-reviews__item__image {
   float: left;
   margin: 65px 3% 0 0;
+  margin: 4.0625rem 3% 0 0;
   border: 6px solid #fff;
 }
 .b-reviews__item__text {
   margin-top: 18px;
+  margin-top: 1.125rem;
 }
 .b-reviews__item__income {
   font-size: 22px;
+  font-size: 1.375rem;
   font-weight: bold;
 }
 .b-reviews__item__income small {
   vertical-align: top;
   font-size: 18px;
+  font-size: 1.125rem;
   font-weight: normal;
 }
 .b-reviews__item__author {
@@ -1098,16 +1136,35 @@ img {
   color: #01a1cf;
   font-weight: normal;
 }
-.b-reviews__item--reverted {
-  text-align: right;
+@media only screen and (min-width : 800px) {
+  .b-reviews__item--reverted {
+    text-align: right;
+  }
+  .b-reviews__item--reverted .b-reviews__item__image {
+    float: right;
+    margin-right: 0;
+    margin-left: 3%;
+  }
+  .b-reviews__item--reverted .b-reviews__item__link {
+    float: left;
+  }
 }
-.b-reviews__item--reverted .b-reviews__item__image {
-  float: right;
-  margin-right: 0;
-  margin-left: 3%;
-}
-.b-reviews__item--reverted .b-reviews__item__link {
-  float: left;
+@media only screen and (max-width : 800px) {
+  .b-reviews__item {
+    text-align: center;
+  }
+  .b-reviews__item__image {
+    display: block;
+    float: none;
+    max-width: 60%;
+    margin: 0 auto 20px;
+    margin: 0 auto 1.25rem;
+  }
+  .b-reviews__item__link {
+    float: none;
+    margin: 10px 0 0;
+    margin: 0.625rem 0 0;
+  }
 }
 .b-salons {
   padding: 70px 0;
@@ -1159,6 +1216,14 @@ img {
 @media only screen and (max-width : 768px) {
   .b-salons__slider {
     width: 312px;
+  }
+  .b-salons .b-pagination {
+    padding: 20px 0 0;
+  }
+  .b-salons .b-pagination__prev,
+  .b-salons .b-pagination__next {
+    position: static;
+    margin: 0 10px;
   }
 }
 .b-steps {
