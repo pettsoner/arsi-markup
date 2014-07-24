@@ -831,6 +831,16 @@ img {
     margin: 0 10px;
   }
 }
+@media only screen and (max-width : 600px) {
+  .b-partners .b-pagination {
+    padding: 20px 0 0;
+  }
+  .b-partners .b-pagination__prev,
+  .b-partners .b-pagination__next {
+    position: static;
+    margin: 0 10px;
+  }
+}
 .b-plans {
   padding: 70px 0;
   padding: 4.375rem 0;
@@ -1176,6 +1186,7 @@ img {
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
 }
 .b-salons__slider {
   position: relative;
@@ -1217,6 +1228,8 @@ img {
   .b-salons__slider {
     width: 312px;
   }
+}
+@media only screen and (max-width : 450px) {
   .b-salons .b-pagination {
     padding: 20px 0 0;
   }
