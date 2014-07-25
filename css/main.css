@@ -162,7 +162,6 @@ img {
   -ms-transition: all 0.1s;
   transition: all 0.1s;
   background: #a19d99;
-  border: 1px solid #fff;
   color: #fff;
 }
 .form-input::-webkit-input-placeholder {
@@ -186,7 +185,7 @@ img {
   color: #000;
 }
 .form-input.error {
-  background: #e02436 !important;
+  outline: 2px solid #e02436;
 }
 .form-input--md {
   font-size: 18px;

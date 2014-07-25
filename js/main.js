@@ -32,7 +32,7 @@ $(document).ready(function() {
 
             if (!$this.val()) {
                 $this.addClass('error'); isError = true;
-            } else if ($this.attr('name') == 'email' && /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($this.val())) {
+            } else if ($this.attr('name') == 'email' && !/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($this.val())) {
                 $this.addClass('error'); isError = true;
             } else {
                 $this.removeClass('error');
