@@ -815,62 +815,14 @@ img {
   }
 }
 .b-header {
-  background: url("../img/b-header.jpg") no-repeat top center;
+  background: url("../img/b-header.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
 }
-.b-header__top {
-  padding: 11px 0;
-  padding: 0.6875rem 0;
-  background: rgba(0,0,0,0.8);
-  color: #fff;
-  font-size: 18px;
-  font-size: 1.125rem;
-/* Местоположение
-        ------------------------------------------------------------------- */
-/* screen > 850px
-        ------------------------------------------------------------------- */
-/* ---------------------------------------------------------------- */
-/* ---------------------------------------------------------------- */
-}
-.b-header__top__col {
-  display: inline-block;
-  vertical-align: middle;
-}
-.b-header__top__location {
-  text-align: center;
-}
-@media only screen and (min-width: 851px) {
-  .b-header__top__logo {
-    width: 49.5555555%;
-  }
-  .b-header__top__location {
-    width: 24.5555555%;
-  }
-  .b-header__top__contacts {
-    width: 24.5555555%;
-  }
-}
-@media only screen and (min-width: 701px) and (max-width: 850px) {
-  .b-header__top__logo {
-    width: 49.5555555%;
-  }
-  .b-header__top__location {
-    width: 24.5555555%;
-  }
-  .b-header__top__contacts {
-    width: 24.5555555%;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .b-header__top__logo {
-    float: left;
-  }
-  .b-header__top__location,
-  .b-header__top__contacts {
-    float: right;
-    clear: right;
+@media only screen and (max-width: 720px) {
+  .b-header {
+    background-position: center top;
   }
 }
 .b-logo {
@@ -1491,23 +1443,6 @@ img {
     margin: 0 auto 0.9375rem;
   }
 }
-.b-promo {
-  padding: 50px 0;
-  padding: 3.125rem 0;
-}
-.b-promo__form {
-  float: right;
-}
-.b-promo__main {
-  float: left;
-  overflow: hidden;
-  padding-right: 20px;
-  padding-right: 1.25rem;
-/* Заголовок
-        ------------------------------------------------ */
-/* Слоган и текст
-        ------------------------------------------------ */
-}
 .b-promo__main__heading {
   margin: 0 0 15px;
   margin: 0 0 0.9375rem;
@@ -1543,6 +1478,26 @@ img {
   font-size: 1.0625rem;
   text-transform: none;
   vertical-align: top;
+}
+@media only screen and (min-width: 721px) {
+  .b-promo__form {
+    float: right;
+  }
+  .b-promo__main {
+    float: left;
+    width: 55%;
+    margin-top: 8%;
+    padding-right: 20px;
+    padding-right: 1.25rem;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .b-promo__form,
+  .b-promo__main {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+  }
 }
 .b-reviews {
   padding: 90px 0;
@@ -1867,6 +1822,67 @@ img {
   background-image: url("../img/b-steps__item--final.png");
   line-height: 1.8;
 }
+.b-top-line {
+  padding: 11px 0;
+  padding: 0.6875rem 0;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  font-size: 18px;
+  font-size: 1.125rem;
+  height: 100px;
+  height: 6.25rem;
+/* Местоположение
+    ------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+}
+.b-top-line--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.b-top-line__col {
+  display: inline-block;
+  vertical-align: middle;
+}
+.b-top-line__location {
+  text-align: center;
+}
+@media only screen and (min-width: 851px) {
+  .b-top-line__logo {
+    width: 49.5555555%;
+  }
+  .b-top-line__location {
+    width: 24.5555555%;
+  }
+  .b-top-line__contacts {
+    width: 24.5555555%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 850px) {
+  .b-top-line__logo {
+    width: 49.5555555%;
+  }
+  .b-top-line__location {
+    width: 24.5555555%;
+  }
+  .b-top-line__contacts {
+    width: 24.5555555%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .b-top-line__logo {
+    float: left;
+  }
+  .b-top-line__location,
+  .b-top-line__contacts {
+    float: right;
+    clear: right;
+  }
+}
 @media only screen and (min-width : 481px) and (max-width : 960px) {
   .container {
     padding-left: 15px;
@@ -1880,7 +1896,7 @@ img {
     font-size: 85%;
   }
 }
-@media only screen and (max-width : 481px) and (max-width : 768px) {
+@media only screen and (min-width : 481px) and (max-width : 768px) {
   html {
     font-size: 80%;
   }

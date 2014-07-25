@@ -37,6 +37,10 @@ $(document).ready(function() {
         prevPage: $bConfidenceSlider.find('.b-pagination__prev'),
     }).init();
 
+    $(window).resize(function() {
+        confidenceSlider.reload();
+    });
+
 
     /* Слайдер партнеров
     ------------------------------------------------------------------------------- */
@@ -77,29 +81,27 @@ $(document).ready(function() {
     /* Шапка
     ------------------------------------------------------------------------------- */
 
-    var $header = $('.b-header');
-        //$fixedHeader = $header.clone().appendTo('body').addClass('b-header--fixed');
+    var $window       = $(window),
+        $header       = $('.b-header'),
+        $promo        = $('.b-promo'),
+        $topLine      = $('.b-top-line'),
+        $fixedTopLine = $topLine.clone().prependTo('body').addClass('b-top-line--fixed');
 
     $(window).resize(function() {
 
-        var $this = $(this);
-
-        confidenceSlider.reload();
-        partnersSlider.reload();
-        salonsSlider.reload();
-        /*if ($this.width < 960) {
-            $('.b-plans td, th').filter(':not(:eq(1))').hide();
-        }
-*/
-        if ($this.width() > 768 || $this.height() > 450) {
-            /*$header.css({ visibility: 'hidden'});
-            $fixedHeader.show();*/
-
-            //$header.height($(window).height());
+        if ($window.width() > 700) {
+            $topLine.css({ visibility: 'hidden'});
+            $fixedTopLine.show();
 
         } else {
-            /*$header.css({ visibility: 'visible'});
-            $fixedHeader.hide();*/
+            $topLine.css({ visibility: 'visible'});
+            $fixedTopLine.hide();
+        }
+
+        if ($window.width() > 720) {
+            $header.css('height', $window.height());
+        } else {
+            $header.css('height', '');
         }
 
     }).trigger('resize');
