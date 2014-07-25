@@ -41,7 +41,17 @@ $(document).ready(function() {
 
         if (isError) { return false; }
 
-        
+        /*$.post('/', $this.serialize(), function(response) {
+
+            if (response.error) {
+                alert(response.error);
+            } else {
+                document.location.href = 'thanks.html';
+            }
+
+        }, 'json');*/
+
+        document.location.href = 'thanks.html';
 
         e.preventDefault();
     });

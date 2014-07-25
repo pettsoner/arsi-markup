@@ -1719,6 +1719,9 @@ img {
   background: #fff;
   text-align: center;
 }
+.b-salons__item + .b-salons__item {
+  margin-top: 25px;
+}
 .b-salons__item__image {
   display: block;
   margin: 0 auto;
