@@ -1139,7 +1139,6 @@
 
 			// Give a chance for helpers or callbacks to update elements
 			F.trigger('beforeShow');
-			$.fn.fullpage.setMouseWheelScrolling(false);
 
 			// Set scrolling before calculating dimensions
 			current.inner.css('overflow', scrolling === 'yes' ? 'scroll' : (scrolling === 'no' ? 'hidden' : scrolling));

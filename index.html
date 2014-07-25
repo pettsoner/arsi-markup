@@ -38,7 +38,7 @@
                 <div class="b-header__top__contacts b-contacts b-header__top__col">
                     <div class="b-contacts__phone">8 800 700 56 80</div>
 
-                    <a href="#" class="link link--dashed">Заказать звонок</a>
+                    <a href="#" class="link link--dashed" data-modal=".b-order-form--modal">Заказать звонок</a>
                 </div>
             </div> 
         </div>
@@ -51,7 +51,7 @@
                     <p class="b-promo__main__text">Простая пошаговая инструкция, 100% работающая<br> система по запуску высокорентабельного<br>бизнеса с нуля!</p>
                 </div>
 
-                <form class="b-order-form b-order-form--light b-promo__form">
+                <form class="b-order-form b-order-form--default b-order-form--light b-promo__form">
                     <h2 class="b-order-form__heading">Оставить заявку<br>прямо сейчас!</h2>
 
                     <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
@@ -162,11 +162,11 @@
             <h2 class="heading--section b-advantages__heading">Почему выбирают нашу франшизу<br>салона красоты «Арси»</h2>
             
             <div class="b-advantages__item b-advantages__item--1">
-                <span>Управление из любой точки мира через нашу CPM-систе-<br>му с видеонаблюдением.</span>
+                <span>Управление из любой точки мира через нашу CPM-систему с видеонаблюдением.</span>
             </div>
 
             <div class="b-advantages__item b-advantages__item--2">
-                <span>Полный комплекс поддержки (включает: подбор помеще-<br>ния, подбор сотрудников и обучение, юридическое у бух-<br>галтерское сопровождение и т. д.)</span>
+                <span>Полный комплекс поддержки (включает: подбор помещения, подбор сотрудников и обучение, юридическое у бухгалтерское сопровождение и т. д.)</span>
             </div>
 
             <div class="b-advantages__item b-advantages__item--3">
@@ -187,7 +187,7 @@
                 <p class="b-order__promo__text">Оставьте заявку и получите бесплатно поэтапный план открытия салона красоты «Арси»</p>
             </div>
 
-            <form class="b-order-form b-order-form--dark b-order__form">
+            <form class="b-order-form b-order-form--default b-order-form--dark b-order__form">
                 <h2 class="b-order-form__heading">Оставьте свои данные</h2>
 
                 <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
@@ -590,7 +590,7 @@
                 <p class="b-order__promo__text">Оставьте заявку и получите бесплатно поэтапный план открытия салона красоты «Арси»</p>
             </div>
 
-            <form class="b-order-form b-order-form--dark b-order__form">
+            <form class="b-order-form b-order-form--default b-order-form--dark b-order__form">
                 <h2 class="b-order-form__heading">Оставьте свои данные</h2>
 
                 <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
@@ -616,13 +616,13 @@
                     </div><!-- /.b-logo.b-footer__logo -->
 
                     <div class="b-footer__agreement b-footer__col">
-                        <a href="#" class="link link--solid">Соглашение об обработке персональных данных</a>
+                        <a href="#" class="link link--solid" data-modal=".b-policy">Соглашение об обработке персональных данных</a>
                     </div><!-- /.b-footer__agreement -->
 
                     <div class="b-footer__contacts b-footer__col b-contacts">
                         <div class="b-contacts__phone">8 800 700 56 80</div>
                         
-                        <a href="#" class="link link--dashed">Заказать звонок</a>
+                        <a href="#" class="link link--dashed" data-modal=".b-order-form--modal">Заказать звонок</a>
                     </div><!-- /.b-contacts.b-footer__contacts -->
                 </div><!-- /.container -->
             </div><!-- /.b-footer__main -->
@@ -634,6 +634,34 @@
                 </div>
             </div> 
     </footer>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <form class="b-order-form b-order-form--modal">
+        <h2 class="b-order-form__heading">Оставте ваши контакты<br>и мы свяжемся с Вами в течении<br>четырех часов</h2>
+
+        <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
+
+        <input type="text" class="form-input form-input--md" placeholder="Телефон">
+
+        <input type="text" class="form-input form-input--md" placeholder="E-mail">
+
+        <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
+
+        <div class="b-order-form__text">* Мы даем 100% конфиденциальность ваших данных</div>
+    </form>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <div class="b-policy">
+        <h2 class="b-policy__heading">Соглашение об обработке<br>персональных данных</h2>
+
+        <p class="b-policy__text">Данное соглашение об обработке персональных данных в соответствии с законодательством Российской Федерации.</p>
+
+        <p class="b-policy__text">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. </p>
+        
+        <p class="b-policy__text">Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. </p>
+    </div>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 

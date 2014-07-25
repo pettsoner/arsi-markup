@@ -85,7 +85,8 @@ $(document).ready(function() {
         var $this = $(this);
 
         confidenceSlider.reload();
-
+        partnersSlider.reload();
+        salonsSlider.reload();
         /*if ($this.width < 960) {
             $('.b-plans td, th').filter(':not(:eq(1))').hide();
         }
