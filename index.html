@@ -12,6 +12,7 @@
 
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link href="css/ie.css" rel="stylesheet" media="all" />
     <![endif]-->
 </head>
 <body>
@@ -66,14 +67,14 @@
                     <p class="b-promo__main__text">Простая пошаговая инструкция, 100% работающая система по запуску высокорентабельного бизнеса с нуля!</p>
                 </div>
                 
-                <form class="b-order-form b-order-form--default b-order-form--light b-promo__form">
+                <form class="b-order-form b-order-form--default b-order-form--light b-promo__form b-form">
                     <h2 class="b-order-form__heading">Оставить заявку<br>прямо сейчас!</h2>
 
-                    <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
+                    <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
 
-                    <input type="text" class="form-input form-input--md" placeholder="Телефон">
+                    <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
 
-                    <input type="text" class="form-input form-input--md" placeholder="E-mail">
+                    <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
 
                     <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
                 </form>
@@ -125,8 +126,8 @@
         <div class="container">
             <h2 class="heading--section b-salons__heading">Салоны «Арси Маникюр и Педикюр»</h2>
             
-            <div class="b-salons__slider">
-                <div class="b-salons__slider__wrapper" id="b-salons__slider__wrapper">
+            <div class="b-salons__slider js-slider">
+                <div class="b-salons__slider__wrapper js-slider__wrapper" id="b-salons__slider__wrapper">
                     <ul>
                         <li class="b-salons__item">
                             <img src="img/b-salons__item-1.jpg" alt="" class="b-salons__item__image">
@@ -160,11 +161,11 @@
                             <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
                         </li>
                     </ul>
+                </div>
 
-                    <div class="b-pagination b-pagination--light b-salons__pagination">
-                        <a href="#" class="b-pagination__prev"></a>
-                        <a href="#" class="b-pagination__next"></a>
-                    </div>
+                <div class="b-pagination b-pagination--light b-salons__pagination">
+                    <a href="#" class="b-pagination__prev"></a>
+                    <a href="#" class="b-pagination__next"></a>
                 </div>
             </div>
         </div>
@@ -202,14 +203,14 @@
                 <p class="b-order__promo__text">Оставьте заявку и получите бесплатно поэтапный план открытия салона красоты «Арси»</p>
             </div>
 
-            <form class="b-order-form b-order-form--default b-order-form--dark b-order__form">
+            <form class="b-order-form b-order-form--default b-order-form--dark b-order__form b-form">
                 <h2 class="b-order-form__heading">Оставьте свои данные</h2>
 
-                <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
+                <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
 
-                <input type="text" class="form-input form-input--md" placeholder="Телефон">
+                <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
 
-                <input type="text" class="form-input form-input--md" placeholder="E-mail">
+                <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
 
                 <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
             </form>
@@ -279,7 +280,7 @@
 
                 <tbody class="b-plans__table__options">
                     <tr>
-                        <td class="option">1. Подробный биз<!-- -<br> -->нес-план</th>
+                        <td class="option">1. Подробный бизнес-план</td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
@@ -295,7 +296,7 @@
                     </tr>
 
                     <tr>
-                        <td class="option">3. Регистрация и бухгал<!-- -<br> -->терское сопровождение<!-- <br> --> ИП для ООО</td>
+                        <td class="option">3. Регистрация и бухгалтерское сопровождение ИП для ООО</td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
@@ -311,7 +312,7 @@
                     </tr>
 
                     <tr>
-                        <td class="option">5. Подбор и обучение<!-- <br> --> персонала</td>
+                        <td class="option">5. Подбор и обучение персонала</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
@@ -319,7 +320,7 @@
                     </tr>
 
                     <tr>
-                        <td class="option">6. Облачная система<!-- <br> --> учета и контроля<!-- <br> -->под ключ с видеонаблю<!-- -<br> -->дением</td>
+                        <td class="option">6. Облачная система учета и контроля под ключ с видеонаблюдением</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
@@ -327,7 +328,7 @@
                     </tr>
 
                     <tr>
-                        <td class="option">7. Индивидуальный<!-- <br> --> маркетинговый план<!-- <br> --> при открытии</td>
+                        <td class="option">7. Индивидуальный маркетинговый план при открытии</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
@@ -335,7 +336,7 @@
                     </tr>
 
                     <tr>
-                        <td class="option">8. Индивидуальный<!-- <br> --> дизайн макет оформле<!-- -<br> -->ния «АРСИ» салона</td>
+                        <td class="option">8. Индивидуальный дизайн макет оформления «АРСИ» салона</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
@@ -382,8 +383,8 @@
         <div class="container">
             <h2 class="heading--section b-confidence__heading">Почему нам доверяют?</h2>
             
-            <div class="b-confidence__slider">
-                <div class="b-confidence__slider__wrapper" id="b-confidence__slider__wrapper">
+            <div class="b-confidence__slider js-slider">
+                <div class="b-confidence__slider__wrapper js-slider__wrapper" id="b-confidence__slider__wrapper">
                     <ul>
                         <li class="b-confidence__item">
                             <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
@@ -409,12 +410,12 @@
                             <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
                         </li>
                     </ul>
-
-                    <div class="b-pagination b-pagination--light b-confidence__pagination">
-                        <a href="#" class="b-pagination__prev"></a>
-                        <a href="#" class="b-pagination__next"></a>
-                    </div>
                 </div><!-- /.b-confidence__slider__wrapper -->
+
+                <div class="b-pagination b-pagination--light b-confidence__pagination">
+                    <a href="#" class="b-pagination__prev"></a>
+                    <a href="#" class="b-pagination__next"></a>
+                </div>
             </div><!-- /.b-confidence__slider -->
         </div><!-- /.container -->
     </section>
@@ -423,7 +424,7 @@
     
     <section class="b-check">
         <div class="container">
-            <form action="" class="b-check-form">
+            <form action="" class="b-check-form b-form">
                 <h2 class="b-check-form__heading b-check-form__heading--one">Помните, что каждую неделю количество<br>городов становится меньше!</h2>
 
                 <h3 class="b-check-form__heading b-check-form__heading--two">Проверьте, не занят ли ваш город?</h3>
@@ -433,11 +434,11 @@
                 </div>
                 
                 <div class="b-check-form__group">
-                    <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
+                    <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
 
-                    <input type="text" class="form-input form-input--md" placeholder="Телефон">
+                    <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
 
-                    <input type="text" class="form-input form-input--md" placeholder="E-mail">
+                    <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
                 </div>
 
                 <button type="submit" class="btn btn--submit btn--lg">Проверить</button>
@@ -566,8 +567,8 @@
         <div class="container">
             <h2 class="heading--section b-partners__heading">Наши ключевые партнеры</h2>
 
-            <div class="b-partners__slider">
-                <div class="b-partners__slider__wrapper" id="b-partners__slider__wrapper">
+            <div class="b-partners__slider js-slider">
+                <div class="b-partners__slider__wrapper js-slider__wrapper" id="b-partners__slider__wrapper">
                     <ul>
                         <li class="b-partners__item">
                             <a href=""><img src="img/b-partners__item-1.jpg" alt="" class="b-partners__item__image"></a>
@@ -605,14 +606,14 @@
                 <p class="b-order__promo__text">Оставьте заявку и получите бесплатно поэтапный план открытия салона красоты «Арси»</p>
             </div>
 
-            <form class="b-order-form b-order-form--default b-order-form--dark b-order__form">
+            <form class="b-order-form b-order-form--default b-order-form--dark b-order__form b-form">
                 <h2 class="b-order-form__heading">Оставьте свои данные</h2>
 
-                <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
+                <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
 
-                <input type="text" class="form-input form-input--md" placeholder="Телефон">
+                <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
 
-                <input type="text" class="form-input form-input--md" placeholder="E-mail">
+                <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
 
                 <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
             </form>
@@ -645,21 +646,21 @@
         <div class="b-footer__bottom">
             <div class="container">
                 <div class="b-footer__bottom__copy">© RC Beautiful, 2008—2014</div>
-                <div class="b-footer__bottom__dev">Сделано в <a href="#" class="link link--solid">Tesla Marketing</a></div>
+                <div class="b-footer__bottom__dev">Сделано в <a href="http://tesla-m.ru/" class="link link--solid">Tesla Marketing</a></div>
             </div>
         </div> 
     </footer>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-    <form class="b-order-form b-order-form--modal">
+    <form class="b-order-form b-order-form--modal b-form">
         <h2 class="b-order-form__heading">Оставте ваши контакты<br>и мы свяжемся с Вами в течении<br>четырех часов</h2>
 
-        <input type="text" class="form-input form-input--md" placeholder="Ваше имя">
+        <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
 
-        <input type="text" class="form-input form-input--md" placeholder="Телефон">
+        <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
 
-        <input type="text" class="form-input form-input--md" placeholder="E-mail">
+        <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
 
         <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
 
@@ -717,6 +718,7 @@
     <script src="js/vendor/jquery.tablehover.min.js"></script>
     <script src="js/vendor/jquery.center.js"></script>
     <script src="js/vendor/jquery.formstyler.min.js"></script>
+    <script src="js/vendor/jquery.maskedinput.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

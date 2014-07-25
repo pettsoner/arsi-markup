@@ -185,6 +185,9 @@ img {
   border-color: #f0f0f0;
   color: #000;
 }
+.form-input.error {
+  border: 2px solid #dc2555 !important;
+}
 .form-input--md {
   font-size: 18px;
   font-size: 1.125rem;
@@ -199,6 +202,7 @@ img {
   text-decoration: none;
 }
 .btn--submit {
+  background: #01cdde;
   background: -webkit-linear-gradient(top, #01cdde, #01adc8);
   background: -moz-linear-gradient(top, #01cdde, #01adc8);
   background: -o-linear-gradient(top, #01cdde, #01adc8);
@@ -959,6 +963,7 @@ img {
   max-width: 23.75rem;
 }
 .b-order-form--dark {
+  background: #000;
   background: rgba(0,0,0,0.8);
   color: #fff;
 }
@@ -1261,6 +1266,7 @@ img {
   border-left: 2px solid #f0f0f0;
 }
 .b-plans__table__top {
+  background: #2e292a;
   background: -webkit-linear-gradient(top, #2e292a, #272324);
   background: -moz-linear-gradient(top, #2e292a, #272324);
   background: -o-linear-gradient(top, #2e292a, #272324);
@@ -1937,6 +1943,7 @@ img {
 .b-top-line {
   padding: 11px 0;
   padding: 0.6875rem 0;
+  background: #000;
   background: rgba(0,0,0,0.8);
   color: #fff;
   font-size: 18px;
