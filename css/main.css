@@ -828,7 +828,7 @@ img {
 }
 @media only screen and (max-width: 720px) {
   .b-header {
-    background-position: center top;
+    background-position: 60% 80%;
   }
 }
 .b-logo {

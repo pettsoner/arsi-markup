@@ -89,15 +89,14 @@ $(document).ready(function() {
     /* Шапка
     ------------------------------------------------------------------------------- */
 
-    var $window       = $(window),
-        $header       = $('.b-header'),
+    var $header       = $('.b-header'),
         $promo        = $('.b-promo'),
         $topLine      = $('.b-top-line'),
         $fixedTopLine = $topLine.clone().prependTo('body').addClass('b-top-line--fixed');
 
     $(window).resize(function() {
 
-        if ($window.width() > 700) {
+        if ($(window).width() > 700) {
             $topLine.css({ visibility: 'hidden'});
             $fixedTopLine.show();
         } else {
@@ -105,16 +104,22 @@ $(document).ready(function() {
             $fixedTopLine.hide();
         }
 
-        if ($window.width() > 682) {
-            $header.css('height', $window.height());
+        if ($(window).width() > 682) {
+            $header.css('height', $(window).height());
         } else {
             $header.css('height', '');
         }
 
-        if ($window.height() > 700 && $window.width() > 682) {
-            $promo.find('.container').center($header);
+        if ($(window).width() > 682) {
+            $promo.find('.container').center({
+                inside: {
+                    el: $header
+                },
+                vOffset: 50,
+                hOffset: -15
+            });
         } else {
-            $promo.css('position', 'static');
+            $promo.find('.container').css('position', 'static');
         }
 
     }).trigger('resize');
