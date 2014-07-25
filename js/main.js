@@ -111,6 +111,14 @@ $(document).ready(function() {
         $plansTableHeader = $plansTable.find('.b-plans__table__top th:not(:first)');
 
     $plansTableHeader.each(function(key) {
+        var $this = $(this);
+
+        if ($this.hasClass('hit')) {
+            $plansTable.find('.b-plans__table__top, .b-plans__table__options tr, .b-plans__table__prices').each(function() {
+                $(this).find('.plan:eq(' + key + ')').addClass('hit');
+            });
+        }
+
         var $table = $plansTable.clone();
 
         $table.removeClass('b-plans__table--full').addClass('b-plans__table--simple');
@@ -121,6 +129,8 @@ $(document).ready(function() {
 
         $plans.append($table);
     });
+
+     $('.b-plans__table').tableHover({rowClass: '', colClass: 'hover', ignoreCols: [1], footCols: true}); 
 
     /*$(window).resize(function(e) {
 
