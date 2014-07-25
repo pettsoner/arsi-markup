@@ -100,7 +100,6 @@ $(document).ready(function() {
         if ($window.width() > 700) {
             $topLine.css({ visibility: 'hidden'});
             $fixedTopLine.show();
-
         } else {
             $topLine.css({ visibility: 'visible'});
             $fixedTopLine.hide();
@@ -112,9 +111,11 @@ $(document).ready(function() {
             $header.css('height', '');
         }
 
-        var promoHeight = $promo.height();
-
-        //$promo.find('.container').center($header);
+        if ($window.height() > 700 && $window.width() > 682) {
+            $promo.find('.container').center($header);
+        } else {
+            $promo.css('position', 'static');
+        }
 
     }).trigger('resize');
 
@@ -145,9 +146,5 @@ $(document).ready(function() {
         $plans.append($table);
     });
 
-     $('.b-plans__table').tableHover({rowClass: '', colClass: 'hover', ignoreCols: [1], footCols: true}); 
-
-    /*$(window).resize(function(e) {
-
-    });*/
+    $('.b-plans__table').tableHover({rowClass: '', colClass: 'hover', ignoreCols: [1], footCols: true}); 
 });

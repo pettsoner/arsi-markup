@@ -1488,9 +1488,6 @@ img {
   vertical-align: top;
 }
 @media only screen and (min-width: 701px) {
-  .b-promo {
-    padding: 4% 0 0;
-  }
   .b-promo__form {
     float: right;
   }
