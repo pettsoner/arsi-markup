@@ -106,11 +106,15 @@ $(document).ready(function() {
             $fixedTopLine.hide();
         }
 
-        if ($window.width() > 720) {
+        if ($window.width() > 682) {
             $header.css('height', $window.height());
         } else {
             $header.css('height', '');
         }
+
+        var promoHeight = $promo.height();
+
+        //$promo.find('.container').center($header);
 
     }).trigger('resize');
 

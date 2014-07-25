@@ -824,6 +824,7 @@ img {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  position: relative;
 }
 @media only screen and (max-width: 720px) {
   .b-header {
@@ -1486,19 +1487,45 @@ img {
   text-transform: none;
   vertical-align: top;
 }
-@media only screen and (min-width: 721px) {
+@media only screen and (min-width: 701px) {
+  .b-promo {
+    padding: 4% 0 0;
+  }
   .b-promo__form {
     float: right;
   }
   .b-promo__main {
     float: left;
-    width: 55%;
     margin-top: 8%;
     padding-right: 20px;
     padding-right: 1.25rem;
+    position: relative;
+  }
+  .b-promo__main:before {
+    content: '';
+    background: url("../img/b-promo__main-arrow.png") no-repeat;
+    width: 85px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
   }
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 820px) {
+  .b-promo__main {
+    width: 57.88888883333333%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 820px) {
+  .b-promo__main {
+    width: 49.5555555%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .b-promo {
+    padding: 20px 0;
+    padding: 1.25rem 0;
+  }
   .b-promo__form,
   .b-promo__main {
     display: block;
@@ -1883,9 +1910,10 @@ img {
   color: #fff;
   font-size: 18px;
   font-size: 1.125rem;
+  min-height: 100px;
+  min-height: 6.25rem;
 /* Местоположение
     ------------------------------------------------------------------- */
-/* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
@@ -1916,7 +1944,7 @@ img {
     width: 24.5555555%;
   }
 }
-@media only screen and (min-width: 701px) and (max-width: 850px) {
+@media only screen and (min-width: 721px) and (max-width: 850px) {
   .b-top-line__logo {
     width: 49.5555555%;
   }
@@ -1927,7 +1955,7 @@ img {
     width: 24.5555555%;
   }
 }
-@media only screen and (min-width: 536px) and (max-width: 700px) {
+@media only screen and (min-width: 536px) and (max-width: 720px) {
   .b-top-line__logo {
     float: left;
   }
@@ -1935,12 +1963,6 @@ img {
   .b-top-line__contacts {
     float: right;
     clear: right;
-  }
-}
-@media only screen and (min-width: 535px) {
-  .b-top-line {
-    height: 100px;
-    height: 6.25rem;
   }
 }
 @media only screen and (max-width: 535px) {
@@ -1953,8 +1975,8 @@ img {
     float: right;
   }
   .b-top-line__location {
-    margin: 16px 0 0;
-    margin: 1rem 0 0;
+    margin: 18px 0 0;
+    margin: 1.125rem 0 0;
     float: left;
   }
 }
