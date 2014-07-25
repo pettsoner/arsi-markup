@@ -39,9 +39,10 @@ $(document).ready(function() {
             }
         });
 
-        if (isError) {
-            return false;
-        }
+        if (isError) { return false; }
+
+        
+
         e.preventDefault();
     });
 
