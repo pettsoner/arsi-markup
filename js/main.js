@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-    $('input, textarea').placeholder();
-
     $(document).on('click', '[data-modal]', function() {
         var $modal = $($(this).data('modal'));
         $.fancybox($modal);
@@ -152,4 +150,8 @@ $(document).ready(function() {
     });
 
     $('.b-plans__table').tableHover({rowClass: '', colClass: 'hover', ignoreCols: [1], footCols: true}); 
+
+    $('.styler').styler();
+
+    $('input, textarea').placeholder();
 });
