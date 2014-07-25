@@ -36,7 +36,7 @@ $(document).ready(function() {
 
     }).trigger('resize');
 
-    /* Настройки fancybox
+    /* Всплывающие окна (fancybox)
     ------------------------------------------------------------------------------- */
 
     $.extend($.fancybox.defaults, {
@@ -47,6 +47,13 @@ $(document).ready(function() {
         openSpeed: 200,
         closeSpeed: 200
         //aspectRatio: true
+    });
+
+    $(document).on('click', '[data-modal]', function(e) {
+        var $modal = $($(this).data('modal'));
+        $.fancybox($modal);
+
+        e.preventDefault();
     });
 
     /* Форма заказа
