@@ -1703,24 +1703,32 @@ img {
   -moz-background-size: cover;
   background-size: cover;
 /* ---------------------------------------------------------------- */
+/*@media only screen and (min-width : 1161px)
+        &__slider
+            width 297px * 3;*/
 /* ---------------------------------------------------------------- */
+/*@media only screen and (min-width : 769px) and (max-width : 1160px)
+        &__slider
+            width 297px * 2;*/
 /* ---------------------------------------------------------------- */
+/*@media only screen and (max-width : 768px)
+        &__slider
+            width 297px;*/
 /* ---------------------------------------------------------------- */
 }
 .b-salons__slider {
   position: relative;
   margin: 0 auto;
+  text-align: center;
 }
 .b-salons__item {
   width: 285px;
-  float: left;
-  margin: 0 6px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 6px;
   padding: 5px 0 0;
   background: #fff;
   text-align: center;
-}
-.b-salons__item + .b-salons__item {
-  margin-top: 25px;
 }
 .b-salons__item__image {
   display: block;
@@ -1738,21 +1746,6 @@ img {
   background: #f0f0f0;
   border-top: 1px solid #e5e5e5;
   line-height: 1.4;
-}
-@media only screen and (min-width : 1161px) {
-  .b-salons__slider {
-    width: 891px;
-  }
-}
-@media only screen and (min-width : 769px) and (max-width : 1160px) {
-  .b-salons__slider {
-    width: 594px;
-  }
-}
-@media only screen and (max-width : 768px) {
-  .b-salons__slider {
-    width: 297px;
-  }
 }
 @media only screen and (max-width : 450px) {
   .b-salons .b-pagination {
@@ -1955,6 +1948,24 @@ img {
     width: 82.88888883333334%;
   }
 }
+.b-to-top {
+  display: none;
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  background: url("../img/b-to-top.png") no-repeat;
+  width: 64px;
+  height: 64px;
+  z-index: 99999;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.b-to-top:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
 .b-top-line {
   padding: 11px 0;
   padding: 0.6875rem 0;
@@ -2025,8 +2036,8 @@ img {
 @media only screen and (max-width: 535px) {
   .b-top-line__logo {
     display: block;
-    margin: 0 0 25px;
-    margin: 0 0 1.5625rem;
+    margin: 0 0 20px;
+    margin: 0 0 1.25rem;
   }
   .b-top-line__contacts {
     float: right;

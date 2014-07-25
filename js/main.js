@@ -1,9 +1,40 @@
 $(document).ready(function() {
 
-    $(document).on('click', '[data-modal]', function() {
-        var $modal = $($(this).data('modal'));
-        $.fancybox($modal);
-    });
+    var $header       = $('.b-header'),
+        $promo        = $('.b-promo'),
+        $topLine      = $('.b-top-line'),
+        $toTop        = $('.b-to-top'),
+        $fixedTopLine = $topLine.clone().prependTo('body').addClass('b-top-line--fixed');
+
+    $(window).resize(function() {
+
+        if ($(window).width() > 700) {
+            $topLine.css({ visibility: 'hidden'});
+            $fixedTopLine.show();
+        } else {
+            $topLine.css({ visibility: 'visible'});
+            $fixedTopLine.hide();
+        }
+
+        if ($(window).width() > 682) {
+            $header.css('height', $(window).height());
+        } else {
+            $header.css('height', '');
+        }
+
+        if ($(window).width() > 682) {
+            $promo.find('.container').center({
+                inside: {
+                    el: $header
+                },
+                vOffset: 50,
+                hOffset: -15
+            });
+        } else {
+            $promo.find('.container').css('position', 'static');
+        }
+
+    }).trigger('resize');
 
     /* Настройки fancybox
     ------------------------------------------------------------------------------- */
@@ -56,44 +87,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    /* Шапка
-    ------------------------------------------------------------------------------- */
-
-    var $header       = $('.b-header'),
-        $promo        = $('.b-promo'),
-        $topLine      = $('.b-top-line'),
-        $fixedTopLine = $topLine.clone().prependTo('body').addClass('b-top-line--fixed');
-
-    $(window).resize(function() {
-
-        if ($(window).width() > 700) {
-            $topLine.css({ visibility: 'hidden'});
-            $fixedTopLine.show();
-        } else {
-            $topLine.css({ visibility: 'visible'});
-            $fixedTopLine.hide();
-        }
-
-        if ($(window).width() > 682) {
-            $header.css('height', $(window).height());
-        } else {
-            $header.css('height', '');
-        }
-
-        if ($(window).width() > 682) {
-            $promo.find('.container').center({
-                inside: {
-                    el: $header
-                },
-                vOffset: 50,
-                hOffset: -15
-            });
-        } else {
-            $promo.find('.container').css('position', 'static');
-        }
-
-    }).trigger('resize');
-
     /* Тарифы
     ------------------------------------------------------------------------------- */
 
@@ -123,9 +116,26 @@ $(document).ready(function() {
 
     $('.b-plans__table').tableHover({rowClass: '', colClass: 'hover', ignoreCols: [1], footCols: true}); 
 
+    /* Стилизация
+    ------------------------------------------------------------------------------- */
+
     $('.styler').styler();
 
+    /* Placeholder для старых браузеров
+    ------------------------------------------------------------------------------- */
+
     $('input, textarea').placeholder();
+
+    /* Кнопка наверх
+    ------------------------------------------------------------------------------- */
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= $header.height()) {
+            $toTop.fadeIn(400);
+        } else {
+            $toTop.fadeOut(400);
+        }
+    })
 });
 
 $(window).load(function() {
