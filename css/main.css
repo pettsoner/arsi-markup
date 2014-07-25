@@ -186,7 +186,7 @@ img {
   color: #000;
 }
 .form-input.error {
-  border: 2px solid #dc2555 !important;
+  background: #e02436 !important;
 }
 .form-input--md {
   font-size: 18px;

@@ -171,7 +171,7 @@ $(window).load(function() {
     /* Слайдер салонов
     ------------------------------------------------------------------------------- */
 
-    var $bSalonsSlider = $('.b-salons__slider');
+    /*var $bSalonsSlider = $('.b-salons__slider');
 
     if ($bSalonsSlider.length) {
         var salonsSlider = new Sly($bSalonsSlider.find('.b-salons__slider__wrapper'), {
@@ -183,6 +183,6 @@ $(window).load(function() {
             nextPage: $bSalonsSlider.find('.b-pagination__next'),
             prevPage: $bSalonsSlider.find('.b-pagination__prev'),
         }).init();
-    }
+    }*/
 
 });
