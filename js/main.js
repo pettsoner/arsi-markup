@@ -24,51 +24,59 @@ $(document).ready(function() {
     ------------------------------------------------------------------------------- */
 
     var $bConfidenceSlider = $('.b-confidence__slider');
-    var confidenceSlider = new Sly($bConfidenceSlider.find('.b-confidence__slider__wrapper'), {
-        horizontal: 1,
-        itemNav: 'basic',
-        touchDragging: 1,
-        speed: 400,
-        dynamicHandle: 1,
-        itemNav: 'forceCentered',
-        smart: 1,
-        activateMiddle: 1,
-        nextPage: $bConfidenceSlider.find('.b-pagination__next'),
-        prevPage: $bConfidenceSlider.find('.b-pagination__prev'),
-    }).init();
 
-    $(window).resize(function() {
-        confidenceSlider.reload();
-    });
+    if ($bConfidenceSlider.length) {
+        var confidenceSlider = new Sly($bConfidenceSlider.find('.b-confidence__slider__wrapper'), {
+            horizontal: 1,
+            itemNav: 'basic',
+            touchDragging: 1,
+            speed: 400,
+            dynamicHandle: 1,
+            itemNav: 'forceCentered',
+            smart: 1,
+            activateMiddle: 1,
+            nextPage: $bConfidenceSlider.find('.b-pagination__next'),
+            prevPage: $bConfidenceSlider.find('.b-pagination__prev'),
+        }).init();
 
+        $(window).resize(function() {
+            confidenceSlider.reload();
+        });
+    }
 
     /* Слайдер партнеров
     ------------------------------------------------------------------------------- */
 
     var $bPartnersSlider = $('.b-partners__slider');
-    var partnersSlider = new Sly($bPartnersSlider.find('.b-partners__slider__wrapper'), {
-        horizontal: 1,
-        itemNav: 'basic',
-        touchDragging: 1,
-        speed: 400,
-        dynamicHandle: 1,
-        nextPage: $bPartnersSlider.find('.b-pagination__next'),
-        prevPage: $bPartnersSlider.find('.b-pagination__prev'),
-    }).init();
+
+    if ($bPartnersSlider.length) {
+        var partnersSlider = new Sly($bPartnersSlider.find('.b-partners__slider__wrapper'), {
+            horizontal: 1,
+            itemNav: 'basic',
+            touchDragging: 1,
+            speed: 400,
+            dynamicHandle: 1,
+            nextPage: $bPartnersSlider.find('.b-pagination__next'),
+            prevPage: $bPartnersSlider.find('.b-pagination__prev'),
+        }).init();
+    }
 
     /* Слайдер салонов
     ------------------------------------------------------------------------------- */
 
     var $bSalonsSlider = $('.b-salons__slider');
-    var salonsSlider = new Sly($bSalonsSlider.find('.b-salons__slider__wrapper'), {
-        horizontal: 1,
-        itemNav: 'basic',
-        touchDragging: 1,
-        speed: 400,
-        dynamicHandle: 1,
-        nextPage: $bSalonsSlider.find('.b-pagination__next'),
-        prevPage: $bSalonsSlider.find('.b-pagination__prev'),
-    }).init();
+
+    if ($bSalonsSlider.length) {
+        var salonsSlider = new Sly($bSalonsSlider.find('.b-salons__slider__wrapper'), {
+            horizontal: 1,
+            itemNav: 'basic',
+            touchDragging: 1,
+            speed: 400,
+            dynamicHandle: 1,
+            nextPage: $bSalonsSlider.find('.b-pagination__next'),
+            prevPage: $bSalonsSlider.find('.b-pagination__prev'),
+        }).init();
+    }
 
     /* Обработка отправки форм
     ------------------------------------------------------------------------------- */

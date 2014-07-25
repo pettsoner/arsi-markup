@@ -100,6 +100,11 @@ a img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
 html {
   font-size: 100%;
 }
@@ -212,8 +217,8 @@ img {
 .btn--lg {
   height: 67px;
   height: 4.1875rem;
-  padding: 15px 20px;
-  padding: 0.9375rem 1.25rem;
+  padding: 20px;
+  padding: 1.25rem;
   font-size: 22px;
   font-size: 1.375rem;
 }
@@ -853,7 +858,9 @@ img {
 .b-logo__text {
   display: inline-block;
   margin: 5px 0 0;
+  margin: 0.3125rem 0 0;
   padding: 5px 0 0;
+  padding: 0.3125rem 0 0;
   font-size: 14px;
   font-size: 0.875rem;
   border-top: 1px solid #575455;
@@ -1822,6 +1829,53 @@ img {
   background-image: url("../img/b-steps__item--final.png");
   line-height: 1.8;
 }
+.b-thanks {
+  background: url("../img/b-thanks.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  min-height: 100%;
+/* --------------------------------------------------- */
+}
+.b-thanks__main {
+  margin: 8% auto 0;
+  padding: 50px 10px;
+  padding: 3.125rem 0.625rem;
+  background: #f8f8f8;
+  background: rgba(248,248,248,0.7);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #e5e5e5;
+  border-color: rgba(229,229,229,0.7);
+  text-align: center;
+}
+.b-thanks__heading {
+  font-size: 54px;
+  font-size: 3.375rem;
+  margin: 0 0 20px;
+  margin: 0 0 1.25rem;
+}
+.b-thanks__text {
+  color: #333;
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+.b-thanks__btn {
+  margin: 45px 0 0;
+  margin: 2.8125rem 0 0;
+  max-width: 330px;
+  max-width: 20.625rem;
+  width: 100%;
+}
+@media only screen and (min-width: 420px) {
+  .b-thanks__main {
+    width: 82.88888883333334%;
+  }
+}
 .b-top-line {
   padding: 11px 0;
   padding: 0.6875rem 0;
@@ -1829,10 +1883,10 @@ img {
   color: #fff;
   font-size: 18px;
   font-size: 1.125rem;
-  height: 100px;
-  height: 6.25rem;
 /* Местоположение
     ------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
@@ -1873,7 +1927,7 @@ img {
     width: 24.5555555%;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 536px) and (max-width: 700px) {
   .b-top-line__logo {
     float: left;
   }
@@ -1881,6 +1935,27 @@ img {
   .b-top-line__contacts {
     float: right;
     clear: right;
+  }
+}
+@media only screen and (min-width: 535px) {
+  .b-top-line {
+    height: 100px;
+    height: 6.25rem;
+  }
+}
+@media only screen and (max-width: 535px) {
+  .b-top-line__logo {
+    display: block;
+    margin: 0 0 25px;
+    margin: 0 0 1.5625rem;
+  }
+  .b-top-line__contacts {
+    float: right;
+  }
+  .b-top-line__location {
+    margin: 16px 0 0;
+    margin: 1rem 0 0;
+    float: left;
   }
 }
 @media only screen and (min-width : 481px) and (max-width : 960px) {
