@@ -174,19 +174,19 @@ img {
   color: #fff;
 }
 .form-input::-webkit-input-placeholder {
-  color: #fff;
+  color: inherit;
 }
 .form-input:-moz-placeholder {
-  color: #fff;
+  color: inherit;
 }
 .form-input::-moz-placeholder {
-  color: #fff;
+  color: inherit;
 }
 .form-input:-ms-input-placeholder {
-  color: #fff;
+  color: inherit;
 }
 .form-input.placeholder {
-  color: #fff;
+  color: inherit;
 }
 .form-input:focus {
   background: #fff;
@@ -999,39 +999,9 @@ img {
   background: #efefef;
   color: #000;
 }
-.b-order-form--modal .form-input::-webkit-input-placeholder {
-  color: #000;
-}
-.b-order-form--modal .form-input:-moz-placeholder {
-  color: #000;
-}
-.b-order-form--modal .form-input::-moz-placeholder {
-  color: #000;
-}
-.b-order-form--modal .form-input:-ms-input-placeholder {
-  color: #000;
-}
-.b-order-form--modal .form-input.placeholder {
-  color: #000;
-}
 .b-order-form--modal .form-input:focus {
   color: #fff;
   background: #8c8c8c;
-}
-.b-order-form--modal .form-input:focus::-webkit-input-placeholder {
-  color: #fff;
-}
-.b-order-form--modal .form-input:focus:-moz-placeholder {
-  color: #fff;
-}
-.b-order-form--modal .form-input:focus::-moz-placeholder {
-  color: #fff;
-}
-.b-order-form--modal .form-input:focus:-ms-input-placeholder {
-  color: #fff;
-}
-.b-order-form--modal .form-input:focus.placeholder {
-  color: #fff;
 }
 .b-order {
   padding: 0 0 65px;
