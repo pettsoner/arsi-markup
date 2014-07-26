@@ -45,18 +45,23 @@ $(document).ready(function() {
         openEffect: 'fade',
         closeEffect: 'fade',
         openSpeed: 200,
-        closeSpeed: 200
+        closeSpeed: 200,
         //aspectRatio: true
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
     });
 
     $('[data-modal-form]').click(function(e) {
-        e.preventDefault();
-
         $form = $('.b-order-form--modal');
 
         $form.find('[name="title"]').val($(this).data('modal-form') || 'Всплывающая форма');
 
         $.fancybox($form);
+
+        e.preventDefault();
     });
 
     $('[data-modal]').click(function(e) {

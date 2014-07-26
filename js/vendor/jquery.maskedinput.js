@@ -222,6 +222,7 @@ $.fn.extend({
 
 							if(android){
 								setTimeout($.proxy($.fn.caret,input,next),0);
+								//input.caret(next);
 							}else{
 								input.caret(next);
 							}
@@ -321,6 +322,7 @@ $.fn.extend({
 				})
 				.bind("keydown.mask", keydownEvent)
 				.bind("keypress.mask", keypressEvent)
+				.bind("keyup.mask", keypressEvent)
 				.bind(pasteEventName, function() {
 					setTimeout(function() { 
 						var pos=checkVal(true);
