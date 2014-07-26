@@ -979,8 +979,8 @@ img {
   display: none;
   padding: 40px 60px;
   padding: 2.5rem 3.75rem;
-  max-width: 460px;
-  max-width: 28.75rem;
+  max-width: 470px;
+  max-width: 29.375rem;
   width: 100%;
 }
 .b-order-form--modal .b-order-form__heading {

@@ -56,7 +56,7 @@
                 <div class="b-top-line__contacts b-contacts b-top-line__col">
                     <div class="b-contacts__phone">8 800 700 74 97</div>
 
-                    <a href="#" class="link link--dashed" data-modal=".b-order-form--modal">Заказать звонок</a>
+                    <a href="#" class="link link--dashed" data-modal-form="Заказать звонок">Заказать звонок</a>
                 </div><!-- /.b-top-line__contacts.b-contacts-->
             </div><!-- /.container -->
         </div><!-- /.b-top-line -->
@@ -79,6 +79,8 @@
                     <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
 
                     <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
+
+                    <input type="hidden" name="title" value="Форма с первого экрана">
 
                     <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
                 </form>
@@ -159,7 +161,7 @@
                     </ul>
                 </div>
 
-                <!-- <div class="b-pagination b-pagination--light b-salons__pagination">
+                <!-- <div class="b-pagination b-pagination-\-light b-salons__pagination">
                     <a href="#" class="b-pagination__prev"></a>
                     <a href="#" class="b-pagination__next"></a>
                 </div> -->
@@ -207,6 +209,8 @@
                 <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
 
                 <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
+                
+                <input type="hidden" name="title" value="">
 
                 <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
             </form>
@@ -353,19 +357,19 @@
                         <td class="option">Цена</td>
                         <td class="plan">
                             <div class="b-plans__price">3 500 <small>руб</small></div>
-                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal=".b-order-form--modal">Заказать</a>
+                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal-form="Заявка на экономный пакет">Заказать</a>
                         </td>
                         <td class="plan">
                             <div class="b-plans__price">10 500 <small>руб</small></div>
-                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal=".b-order-form--modal">Заказать</a>
+                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal-form="Заявка на сокращенный пакет">Заказать</a>
                         </td>
                         <td class="plan">
                             <div class="b-plans__price">500 <small>руб</small></div>
-                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal=".b-order-form--modal">Заказать</a>
+                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal-form="Заявка на базовый пакет">Заказать</a>
                         </td>
                         <td class="plan">
                             <div class="b-plans__price">25 500 <small>руб</small></div>
-                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal=".b-order-form--modal">Заказать</a>
+                            <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal-form="Заявка на премиум пакет»">Заказать</a>
                         </td>
                     </tr>
                 </tfoot>
@@ -436,6 +440,8 @@
 
                     <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
                 </div>
+
+                <input type="hidden" name="title" value="Интересно, не занят ли город">
 
                 <button type="submit" class="btn btn--submit btn--lg">Проверить</button>
             </form>
@@ -611,6 +617,8 @@
 
                 <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
 
+                <input type="hidden" name="title" value="Форма для вопросов, в конце">
+
                 <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
             </form>
         </div>
@@ -634,7 +642,7 @@
                 <div class="b-footer__contacts b-footer__col b-contacts">
                     <div class="b-contacts__phone">8 800 700 74 97</div>
                     
-                    <a href="#" class="link link--dashed" data-modal=".b-order-form--modal">Заказать звонок</a>
+                    <a href="#" class="link link--dashed" data-modal-form>Заказать звонок</a>
                 </div><!-- /.b-contacts.b-footer__contacts -->
             </div><!-- /.container -->
         </div><!-- /.b-footer__main -->
@@ -657,6 +665,8 @@
         <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
 
         <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
+
+        <input type="hidden" name="title" value="">
 
         <button type="submit" class="btn btn--submit btn--lg">Отправить</button>
 
@@ -718,7 +728,7 @@
     <script src="js/vendor/jquery.tablehover.min.js"></script>
     <script src="js/vendor/jquery.center.js"></script>
     <script src="js/vendor/jquery.formstyler.min.js"></script>
-    <script src="js/vendor/jquery.mask.min.js"></script>
+    <script src="js/vendor/jquery.maskedinput.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

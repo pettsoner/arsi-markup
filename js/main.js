@@ -49,16 +49,26 @@ $(document).ready(function() {
         //aspectRatio: true
     });
 
-    $('[data-modal]').click(function(e) {
-        $.fancybox($($(this).data('modal')));
-
+    $('[data-modal-form]').click(function(e) {
         e.preventDefault();
+
+        $form = $('.b-order-form--modal');
+
+        $form.find('[name="title"]').val($(this).data('modal-form') || 'Всплывающая форма');
+
+        $.fancybox($form);
+    });
+
+    $('[data-modal]').click(function(e) {
+        e.preventDefault();
+
+        $.fancybox($($(this).data('modal')));
     });
 
     /* Форма заказа
     ------------------------------------------------------------------------------- */
     
-    $('[name="phone"]').mask("+0(000)000-00-00");
+    $('[name="phone"]').mask("+9(999)999-99-99");
 
     $(document).on('submit', '.b-form', function(e) {
         var $this   = $(this),
@@ -78,7 +88,7 @@ $(document).ready(function() {
 
         if (isError) { return false; }
 
-        /*$.post('/', $this.serialize(), function(response) {
+        $.post('/order.php', $this.serialize(), function(response) {
 
             if (response.error) {
                 alert(response.error);
@@ -86,9 +96,9 @@ $(document).ready(function() {
                 document.location.href = 'thanks.html';
             }
 
-        }, 'json');*/
+        }, 'json');
 
-        document.location.href = 'thanks.html';
+        //document.location.href = 'thanks.html';
 
         e.preventDefault();
     });
