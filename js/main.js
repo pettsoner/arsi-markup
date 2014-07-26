@@ -73,7 +73,7 @@ $(document).ready(function() {
     /* Форма заказа
     ------------------------------------------------------------------------------- */
     
-    $('[name="phone"]').mask("+0(000)000-00-00", {placeholder: "+_(___)___-__-__", clearIfNotMatch: true});
+    $('[name="phone"]').inputmask("+9(999)999-99-99", {placeholder: "+_(___)___-__-__", clearIncomplete: true});
 
     $(document).on('submit', '.b-form', function(e) {
         var $this   = $(this),
