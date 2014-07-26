@@ -557,7 +557,6 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5;
-  word-break: break-all;
 }
 .b-advantages__item + .b-advantages__item {
   margin-top: 10px;
@@ -692,6 +691,7 @@ img {
 }
 .b-confidence__heading {
   color: #fff;
+  text-shadow: 1px 1px 2px #747474;
 }
 .b-confidence__slider {
   position: relative;
@@ -879,8 +879,6 @@ img {
   top: -11px;
   top: -0.6875rem;
   left: 0;
-  -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.15);
-  box-shadow: 0 0 30px rgba(0,0,0,0.15);
 }
 .b-logo__company {
   font-size: 24px;

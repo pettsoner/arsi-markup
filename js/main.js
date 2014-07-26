@@ -49,9 +49,8 @@ $(document).ready(function() {
         //aspectRatio: true
     });
 
-    $(document).on('click', '[data-modal]', function(e) {
-        var $modal = $($(this).data('modal'));
-        $.fancybox($modal);
+    $('[data-modal]').click(function(e) {
+        $.fancybox($($(this).data('modal')));
 
         e.preventDefault();
     });
