@@ -1,7 +1,7 @@
 <?php
 $config = array(
   'mail' => array(
-      'to'    => 'pettsonchello@gmail.com',
+      'to'    => 'teslabuffer@yandex.ru',
       'from'  => '',
       'reply' => 'support'
   )

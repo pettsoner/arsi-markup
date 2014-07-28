@@ -1,40 +1,43 @@
 $(document).ready(function() {
 
-    var $header       = $('.b-header'),
-        $promo        = $('.b-promo'),
-        $topLine      = $('.b-top-line'),
-        $toTop        = $('.b-to-top'),
-        $fixedTopLine = $topLine.clone().prependTo('body').addClass('b-top-line--fixed');
+    var $bHeader       = $('.b-header'),
+        $bPromo        = $('.b-promo'),
+        $bTopLine      = $('.b-top-line'),
+        $bToTop        = $('.b-to-top');
 
-    $(window).resize(function() {
+    if ($bHeader.length) {
+        $(window).resize(function() {
 
-        if ($(window).width() > 700) {
-            $topLine.css({ visibility: 'hidden'});
-            $fixedTopLine.show();
-        } else {
-            $topLine.css({ visibility: 'visible'});
-            $fixedTopLine.hide();
-        }
+            if ($(window).width() > 682) {
+                $('body').prepend($bTopLine.addClass('b-top-line--fixed'));
 
-        if ($(window).width() > 682) {
-            $header.css('height', $(window).height());
-        } else {
-            $header.css('height', '');
-        }
+                $bHeader.css('height', $(window).height());
 
-        if ($(window).width() > 682) {
-            $promo.find('.container').center({
-                inside: {
-                    el: $header
-                },
-                vOffset: 50,
-                hOffset: -15
-            });
-        } else {
-            $promo.find('.container').css('position', 'static');
-        }
+                $bPromo.find('.container').center({
+                    inside: {
+                        el: $bHeader
+                    },
+                    vOffset: 65,
+                    hOffset: -14
+                });
+            } else {
+                $bHeader.css('height', '').prepend($bTopLine.removeClass('b-top-line--fixed'));
 
-    }).trigger('resize');
+                $bPromo.find('.container').css('position', 'static');
+            }
+
+        });
+    }
+
+    /* Стилизация элементов форм
+    ------------------------------------------------------------------------------- */
+
+    $('.styler').styler();
+
+    /* Placeholder для старых браузеров
+    ------------------------------------------------------------------------------- */
+
+    $('input, textarea').placeholder();
 
     /* Всплывающие окна (fancybox)
     ------------------------------------------------------------------------------- */
@@ -54,7 +57,7 @@ $(document).ready(function() {
         }
     });
 
-    $('[data-modal-form]').click(function(e) {
+    $(document).on('click', '[data-modal-form]', function(e) {
         $form = $('.b-order-form--modal');
 
         $form.find('[name="title"]').val($(this).data('modal-form') || 'Всплывающая форма');
@@ -64,7 +67,7 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('[data-modal]').click(function(e) {
+    $(document).on('click', '[data-modal]', function(e) {
         e.preventDefault();
 
         $.fancybox($($(this).data('modal')));
@@ -137,38 +140,25 @@ $(document).ready(function() {
 
     $('.b-plans__table').tableHover({rowClass: '', colClass: 'hover', ignoreCols: [1], footCols: true}); 
 
-    /* Стилизация
-    ------------------------------------------------------------------------------- */
-
-    $('.styler').styler();
-
-    /* Placeholder для старых браузеров
-    ------------------------------------------------------------------------------- */
-
-    $('input, textarea').placeholder();
-
     /* Кнопка наверх
     ------------------------------------------------------------------------------- */
 
     $(window).scroll(function() {
-        if ($(window).scrollTop() >= $header.height()) {
-            $toTop.fadeIn(400);
+        if ($(window).scrollTop() >= $bHeader.height()) {
+            $bToTop.fadeIn(400);
         } else {
-            $toTop.fadeOut(400);
+            $bToTop.fadeOut(400);
         }
-    })
+    });
+
+    /* Вызываем событие resize
+    ------------------------------------------------------------------------------- */
+
+    $(window).trigger('resize');
+
 });
 
 $(window).load(function() {
-
-    $(window).resize(function() {
-        $('.js-slider').each(function() {
-            $(this)
-                .find('.js-slider__wrapper')
-                .height($(this).find('li:first').css('height'));
-        });
-    }).trigger('resize');
-
     /* Слайдер доверия
     ------------------------------------------------------------------------------- */
 
@@ -210,21 +200,37 @@ $(window).load(function() {
         }).init();
     }
 
-    /* Слайдер салонов
+    /* Слайдер заведений
     ------------------------------------------------------------------------------- */
 
-    /*var $bSalonsSlider = $('.b-salons__slider');
+    /*var $bPlacesSlider = $('.b-places__slider');
 
-    if ($bSalonsSlider.length) {
-        var salonsSlider = new Sly($bSalonsSlider.find('.b-salons__slider__wrapper'), {
+    if ($bPlacesSlider.length) {
+        var placesSlider = new Sly($bPlacesSlider.find('.b-places__slider__wrapper'), {
             horizontal: 1,
             itemNav: 'basic',
             touchDragging: 1,
             speed: 400,
             dynamicHandle: 1,
-            nextPage: $bSalonsSlider.find('.b-pagination__next'),
-            prevPage: $bSalonsSlider.find('.b-pagination__prev'),
+            nextPage: $bPlacesSlider.find('.b-pagination__next'),
+            prevPage: $bPlacesSlider.find('.b-pagination__prev'),
         }).init();
     }*/
+
+    /* Установка высоты слайдеров
+    ------------------------------------------------------------------------------- */
+
+    $(window).resize(function() {
+        $('.js-slider').each(function() {
+            $(this)
+                .find('.js-slider__wrapper')
+                .height($(this).find('li:first').css('height'));
+        });
+    });
+
+    /* Вызываем событие resize
+    ------------------------------------------------------------------------------- */
+
+    $(window).trigger('resize');
 
 });
