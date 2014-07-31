@@ -3,7 +3,8 @@ $(document).ready(function() {
     var $bHeader       = $('.b-header'),
         $bPromo        = $('.b-promo'),
         $bTopLine      = $('.b-top-line'),
-        $bToTop        = $('.b-to-top');
+        $bToTop        = $('.b-to-top'),
+        $bSetLocation  = $('.b-set-location');
 
     if ($bHeader.length) {
         $(window).resize(function() {
@@ -29,10 +30,21 @@ $(document).ready(function() {
         });
     }
 
+    $bSetLocation.find('button').click(function() {
+        var $city = $bSetLocation.find('[name="city"]');
+
+        if (!$city.val()) {
+            $city.addClass('error');
+        } else {
+            $bTopLine.find('.b-top-line__location__city').text($city.val());
+            $.fancybox.close();
+        }
+    });
+
     /* Стилизация элементов форм
     ------------------------------------------------------------------------------- */
 
-    $('.styler').styler();
+    //$('.styler').styler();
 
     /* Placeholder для старых браузеров
     ------------------------------------------------------------------------------- */
@@ -222,9 +234,15 @@ $(window).load(function() {
 
     $(window).resize(function() {
         $('.js-slider').each(function() {
-            $(this)
-                .find('.js-slider__wrapper')
-                .height($(this).find('li:first').css('height'));
+            var height = 0;
+
+            $(this).find('li').each(function() {
+                if ($(this).height() > height) {
+                    height = $(this).height();
+                }
+            })
+            
+            $(this).find('.js-slider__wrapper').height(height);
         });
     });
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +27,7 @@
         <div class="b-top-line">
             <div class="container">
                 <div class="b-logo b-logo--header b-top-line__logo b-top-line__col">
-                    <a href="/"><img src="img/b-logo.png" alt="" class="b-logo__image"></a>
+                    <a href="/" class="b-logo__image"><img src="img/b-logo.png" alt=""></a>
 
                     <div class="b-logo__company">RC Manicure <small>&amp; Pedicure</small></div>
 
@@ -37,7 +36,7 @@
 
                 <div class="b-top-line__location b-top-line__col">
                     Ваш город: 
-                    <select class="form-select styler">
+                    <!-- <select class="form-select styler">
                         <option value="">Москва</option>
                         <option value="">Московская область</option>
                         <option value="">Санкт-Петербург</option>
@@ -50,10 +49,14 @@
                         <option value="">Челябинск</option>
                         <option value="">Омск</option>
                         <option value="">Ростов-на-Дону</option>
-                    </select>
+                    </select> -->
+
+                    <a href="#" class="b-top-line__location__city link link--dashed" data-modal=".b-set-location">Москва</a>
                 </div><!-- b-top-line__location.b-top-line__col -->
 
                 <div class="b-top-line__contacts b-contacts b-top-line__col">
+                    <div>Звонок по России бесплатный</div>
+
                     <div class="b-contacts__phone">8 800 700 74 97</div>
 
                     <a href="#" class="link link--dashed" data-modal-form="Заказать звонок">Заказать звонок</a>
@@ -66,7 +69,7 @@
                 <div class="b-promo__main">
                     <h1 class="b-promo__main__heading">Франчайзинг маникюрных салонов «АРСИ»</h1>
 
-                    <p class="b-promo__main__slogan">Наслаждайтесь красивым бизнесом и красивыми пальчиками в своем салоне красоты, зарабатывая от<br> <strong>100 000 <small>руб</small></strong> в месяц.</p>
+                    <p class="b-promo__main__slogan">Наслаждайтесь красивым бизнесом и аккуратными пальчики в своем салоне красоты при этом зарабатывая от <nobr><strong>100 000 <small>рублей</small></strong></nobr> уже через 30 дней!</p>
 
                     <p class="b-promo__main__text">Простая пошаговая инструкция, 100% работающая система по запуску высокорентабельного <br>бизнеса с нуля!</p>
                 </div>
@@ -74,11 +77,11 @@
                 <form class="b-order-form b-order-form--default b-order-form--light b-promo__form b-form">
                     <h2 class="b-order-form__heading">Оставить заявку<br>прямо сейчас!</h2>
 
-                    <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
+                    <input type="text" class="form-input form-input--md form-input--dark" placeholder="Ваше имя" name="name">
 
-                    <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
+                    <input type="text" class="form-input form-input--md form-input--dark" placeholder="Телефон" name="phone">
 
-                    <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
+                    <input type="text" class="form-input form-input--md form-input--dark" placeholder="E-mail" name="email">
 
                     <input type="hidden" name="title" value="Форма с первого экрана">
 
@@ -140,7 +143,7 @@
 
                             <div class="b-salons__item__name">Салон «Арси радость жизни»</div>
 
-                            <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
+                            <!-- <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
                         </li>
 
                         <li class="b-salons__item">
@@ -148,7 +151,7 @@
 
                             <div class="b-salons__item__name">Салон «Арси природа»</div>
 
-                            <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
+                            <!-- <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
                         </li>
 
                         <li class="b-salons__item">
@@ -156,7 +159,31 @@
 
                             <div class="b-salons__item__name">Салон «Арси Уларси»</div>
 
-                            <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div>
+                            <!-- <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
+                        </li>
+
+                        <li class="b-salons__item">
+                            <img src="img/b-salons__item-3.jpg" alt="" class="b-salons__item__image">
+
+                            <div class="b-salons__item__name">Салон «Арси Уларси»</div>
+
+                            <!-- <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
+                        </li>
+
+                        <li class="b-salons__item">
+                            <img src="img/b-salons__item-3.jpg" alt="" class="b-salons__item__image">
+
+                            <div class="b-salons__item__name">Салон «Арси Уларси»</div>
+
+                            <!-- <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
+                        </li>
+
+                        <li class="b-salons__item">
+                            <img src="img/b-salons__item-3.jpg" alt="" class="b-salons__item__image">
+
+                            <div class="b-salons__item__name">Салон «Арси Уларси»</div>
+
+                            <!-- <div class="b-salons__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
                         </li>
                     </ul>
                 </div>
@@ -184,11 +211,11 @@
             </div>
 
             <div class="b-advantages__item b-advantages__item--3">
-                <span>Возможность взять кредит на выгодных условиях!</span>
+                <span>Можно открыть салон в кредит по выгодным условиям, более 10 банков партнеров с выгодными условиями</span>
             </div>
             
             <div class="b-advantages__item b-advantages__item--4">
-                <span>Профессиональная маркетинговая программа.</span>
+                <span>Профессиональная маркетинговая программа, включающая Брэнд БУК, план открытия, рекламные модули, основы работы с промоутерами и каналами рекламы.</span>
             </div>
         </div>
     </section>
@@ -204,11 +231,11 @@
             <form class="b-order-form b-order-form--default b-order-form--dark b-order__form b-form">
                 <h2 class="b-order-form__heading">Оставьте свои данные</h2>
 
-                <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
+                <input type="text" class="form-input form-input--md form-input--darker" placeholder="Ваше имя" name="name">
 
-                <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
+                <input type="text" class="form-input form-input--md form-input--darker" placeholder="Телефон" name="phone">
 
-                <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
+                <input type="text" class="form-input form-input--md form-input--darker" placeholder="E-mail" name="email">
                 
                 <input type="hidden" name="title" value="">
 
@@ -226,13 +253,13 @@
             <div class="b-profit__item">
                 <img src="img/b-profit__item-6.png" alt="" class="b-profit__item__image">
 
-                <p class="b-profit__item__text">Профессиональные специалисты</p>
+                <p class="b-profit__item__text">Профессиональная сертифицированная<br> школа маникюра </p>
             </div>
 
             <div class="b-profit__item">
                 <img src="img/b-profit__item-7.png" alt="" class="b-profit__item__image">
 
-                <p class="b-profit__item__text">Уникальная клубная система «Арси»</p>
+                <p class="b-profit__item__text">Уникальная женская клубная система «Арси»</p>
             </div>
 
             <div class="b-profit__item">
@@ -244,13 +271,13 @@
             <div class="b-profit__item">
                 <img src="img/b-profit__item-9.png" alt="" class="b-profit__item__image">
 
-                <p class="b-profit__item__text">Красивый бизнес по открытой и <br>доступной модели</p>
+                <p class="b-profit__item__text">Красивый бизнес по открытой и<br> доступной модели с вашим<br> индивидуальным дизайном салона</p>
             </div>
 
             <div class="b-profit__item">
                 <img src="img/b-profit__item-10.png" alt="" class="b-profit__item__image">
 
-                <p class="b-profit__item__text">Высокие стандарты сервиса</p>
+                <p class="b-profit__item__text">Высокие стандарты, подтвержденные более<br> 50 наградами в международных конкурсах</p>
             </div>
 
             <div class="b-profit__item">
@@ -280,7 +307,7 @@
 
                 <tbody class="b-plans__table__options">
                     <tr>
-                        <td class="option">1. Подробный <br>бизнес-план</td>
+                        <td class="option">Бизнес план</td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
@@ -288,7 +315,7 @@
                     </tr>
 
                     <tr>
-                        <td class="option">2. Бренд бук</td>
+                        <td class="option">Бренд бук</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
@@ -296,31 +323,23 @@
                     </tr>
 
                     <tr>
-                        <td class="option">3. Регистрация и бухгалтерское сопровождение ИП для ООО</td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="option">4. Подбор помещения</td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="option">Юридическая и бухгалтерская консультация <nobr>on-line</nobr></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">5. Подбор и обучение персонала</td>
+                        <td class="option">Консультации специалиста On-line в рабочее время</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
-                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">6. Облачная система учета и контроля <nobr>под ключ с</nobr> видеонаблюдением</td>
+                        <td class="option">Консультаций специалиста On-line 24 часа в сутки</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
@@ -328,25 +347,73 @@
                     </tr>
 
                     <tr>
-                        <td class="option">7. Индивидуальный маркетинговый план при открытии</td>
+                        <td class="option">Консультирование по выбору помещения для салона</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="option">8. Индивидуальный дизайн макет оформления «АРСИ» салона</td>
-                        <td class="plan"><span class="b-plans__option--no"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">9. Корпоративный сайт</td>
+                        <td class="option">Обучение в реальных условиях в профессиональной школе</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Льготные цены на расходные материалы</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Облачная система учета и контроля под ключ</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Индивидуальный маркетинговый план при открытии</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Индивидуальный дизайн макета салона</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Корпоративный сайт</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Сертификат в рамке</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Облачная система учета и контроля под ключ *</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
@@ -356,19 +423,19 @@
                     <tr>
                         <td class="option">Цена</td>
                         <td class="plan">
-                            <div class="b-plans__price">3 500 <small>руб</small></div>
+                            <div class="b-plans__price">79000 <small>руб</small></div>
                             <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal-form="Заявка на экономный пакет">Заказать</a>
                         </td>
                         <td class="plan">
-                            <div class="b-plans__price">10 500 <small>руб</small></div>
+                            <div class="b-plans__price">127000 <small>руб</small></div>
                             <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal-form="Заявка на сокращенный пакет">Заказать</a>
                         </td>
                         <td class="plan">
-                            <div class="b-plans__price">500 <small>руб</small></div>
+                            <div class="b-plans__price">198000 <small>руб</small></div>
                             <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal-form="Заявка на базовый пакет">Заказать</a>
                         </td>
                         <td class="plan">
-                            <div class="b-plans__price">25 500 <small>руб</small></div>
+                            <div class="b-plans__price">248000 <small>руб</small></div>
                             <a href="#" class="btn btn--md btn--submit b-plans__order-btn" data-modal-form="Заявка на премиум пакет»">Заказать</a>
                         </td>
                     </tr>
@@ -393,19 +460,43 @@
                         </li>
 
                         <li class="b-confidence__item">
-                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+                            <img src="img/b-confidence__item-2.jpg" alt="" class="b-confidence__item__image">
 
                             <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
                         </li>
 
                         <li class="b-confidence__item">
-                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+                            <img src="img/b-confidence__item-3.jpg" alt="" class="b-confidence__item__image">
 
                             <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
                         </li>
 
                         <li class="b-confidence__item">
-                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+                            <img src="img/b-confidence__item-4.jpg" alt="" class="b-confidence__item__image">
+
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
+                        </li>
+
+                        <li class="b-confidence__item">
+                            <img src="img/b-confidence__item-5.jpg" alt="" class="b-confidence__item__image">
+
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
+                        </li>
+
+                        <li class="b-confidence__item">
+                            <img src="img/b-confidence__item-6.jpg" alt="" class="b-confidence__item__image">
+
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
+                        </li>
+
+                        <li class="b-confidence__item">
+                            <img src="img/b-confidence__item-7.jpg" alt="" class="b-confidence__item__image">
+
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
+                        </li>
+
+                        <li class="b-confidence__item">
+                            <img src="img/b-confidence__item-8.png" alt="" class="b-confidence__item__image">
 
                             <p class="b-confidence__item__desc">У нас собственная команда разработчиков професиональный ERP платформ вместе с которыми мы каждый день делаем Вашу работу быстрее, удобнее и эффективнее.</p>
                         </li>
@@ -459,17 +550,21 @@
 
                 <div class="b-reviews__item__main">
                     <div class="b-reviews__item__top">
-                        <div class="b-reviews__item__author">Юлия Александрова</div>
+                        <div class="b-reviews__item__author">Мария Печалина</div>
 
-                        <a href="https://vk.com/aleksayulya" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/aleksayulya</a>
+                        <a href="https://vk.com/pechalina" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/pechalina</a>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Уровень дохода: <span class="b-reviews__item__income">10 000 000 <small>руб.</small></span>
+                        Инвестировала <span class="b-reviews__item__income">600 000 <small>руб</small></span>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Мне помог открыть бизнес мой мужчина. Я давно искала себе занятие и меня всегда привлекала красота. В своем салоне я чувствую себя очень свободно и легко. Мне действительно нравится заниматься моим делом. Все работники стали моими подругами,также как и клиентки. Мне нравится проводить время в своем салоне и при этом я зарабатываю и чувствую себя независимой. Я искренне считаю, что когда девушка занята своим делам она счастлива. Я могу про себя сказать, что я счастливый человек и в какой то мере, это произошло благодаря АРСИ Маникюр.<br>Выбирала из нескольких франшиз. Остановилась на АРСИ Маникуюр так как понятный бизнес в котором и я сама являюсь клиентом. Денег на бизнес не хватало, но мне предложили возможность кредитования. Салон был открыт через 1 месяц и я вышла на окупаемость уже через 2 недели, благодаря четкой и гибкой маркетинговой программе, что Планирую открыть еще два салон.
+                        Ежемесячный доход на салоне <span class="b-reviews__item__income">119 000 <small>руб</small></span>.
+                    </div>
+
+                    <div class="b-reviews__item__text">
+                        Всегда хотела иметь свой салон красоты, так как мне очень близка тема красоты, ухода за собой.Люблю выглядеть ярко, красиво и ухоженно. Сама являлась клиенткой АРСИ Маникюр, и как только узнала про запуск франшиз , я решилась, практически не раздумывая. По-началу очень боялась, что что-то не получится, так как это для меня первый бизнес. К счастью в Арси маникюр все разложено по этапам, и на каждом этапе на помощь приходил специалист, который подсказываел, помогал, отвечал на все вопросы, и, самое главное, поддерживал. С ними я чувствовала, что я не одна, и что с такой командой все обязатльно получится. Как впрочем и случилось. Сегодня я владелица Салона АРСИ Маникюр, я независима и успешна, и вдобавок всегда красива и ухожена:)
                     </div>
                 </div>
             </div>
@@ -479,17 +574,21 @@
 
                 <div class="b-reviews__item__main">
                     <div class="b-reviews__item__top">
-                        <div class="b-reviews__item__author">Юлия Козлова</div>
+                        <div class="b-reviews__item__author">Юлия Сергеева</div>
 
-                        <a href="https://vk.com/yuliakozlova" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/yuliakozlova</a>
+                        <a href="https://vk.com/id4824164" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/id4824164</a>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Прибыль: <span class="b-reviews__item__income">20 000 000 <small>руб.</small></span>
+                        Инвестировала <span class="b-reviews__item__income">390 000 <small>руб</small></span>
+                    </div>
+                    
+                    <div class="b-reviews__item__text">
+                        Ежемесячный доход <span class="b-reviews__item__income">79 000 <small>руб</small></span>.
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Выбирала из нескольких франшиз. Остановилась на АРСИ Маникуюр так как понятный бизнес в котором и я сама являюсь клиентом. Денег на бизнес не хватало, но мне предложили возможность кредитования. Салон был открыт через 1 месяц и я вышла на окупаемость уже через 2 недели, благодаря четкой и гибкой маркетинговой программе, что Планирую открыть еще два салона.
+                        Мне помог открыть бизнес мой мужчина. Я давно искала себе увлекательное занятие, меня всегда привлекала красота. В своем салоне я чувствую себя очень свободно и комфортно. Мне действительно нравится заниматься моим делом. Когда я прихожу в салон у нас всегда царит теплая и дружелюбная обстановка с девочками. Мне нравится проводить время в своем салоне всегда выглядеть красивой и ухоженной, и при этом я зарабатываю и чувствую себя независимой. Я искренне считаю, что когда девушка чем то увлечена-она счастлива. Это действительно бесценно-я занимаюсь любимым делом, которое мне приносит хороший доход. Я могу про себя сказать, что я счастливый человек и в какой то мере, это произошло благодаря АРСИ Маникюр.
                     </div>
                 </div>
             </div>
@@ -500,17 +599,21 @@
                 <div class="b-reviews__item__main">
 
                     <div class="b-reviews__item__top">
-                        <div class="b-reviews__item__author">Айгуль Мурашкина</div>
+                        <div class="b-reviews__item__author">Наталья Кощеева</div>
 
-                        <a href="https://vk.com/aigulyami" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/aigulyami</a>
+                        <a href="https://vk.com/id48071237" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/id48071237</a>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Прибыль: <span class="b-reviews__item__income">5 000 000 <small>руб.</small></span>
+                        Инвестировала <span class="b-reviews__item__income">890 000 <small>руб</small></span>
+                    </div>
+                    
+                    <div class="b-reviews__item__text">
+                        Ежемесячный доход <span class="b-reviews__item__income">170 000 <small>руб</small></span>.
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Всегда хотела заняться своим бизнесом, так как видела в этом самовыражение. Вдобавок сама являлась клиенткой АРСИ Маникюр, как только узнала про запуск франшиз , решилась практически не раздумывая. Очень боялась, что не получится, так как это для меня первый бизнес. К счастью в Арси маникюр все разложено по этапам, и на каждом этапе на помощь приходил специалист, который подсказывал помогал и, самое главное, поддерживал. С ними я чувствовала, что не одна и что с такой командой не возможно не прийти к успеху. Как впрочем и случилось. Сегодня я владелица Салона АРСИ Маникюр я независима и успешна и самое главное у меня всегда красивые пальчики :)
+                        Выбирала из нескольких франшиз. Остановилась на АРСИ Маникюр потому что это  понятный для меня бизнес в котором и я сама являюсь клиентом. Денег на бизнес не хватало, но мне предложили возможность кредитования. Салон мы открыли через 1 месяц и я вышла на окупаемость уже через 2 недели, благодаря четкой и гибкой маркетинговой программе поддержки, что даже Планирую открыть еще один салон.
                     </div>
                 </div>
             </div>
@@ -611,11 +714,11 @@
             <form class="b-order-form b-order-form--default b-order-form--dark b-order__form b-form">
                 <h2 class="b-order-form__heading">Оставьте свои данные</h2>
 
-                <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
+                <input type="text" class="form-input form-input--md form-input--darker" placeholder="Ваше имя" name="name">
 
-                <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
+                <input type="text" class="form-input form-input--md form-input--darker" placeholder="Телефон" name="phone">
 
-                <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
+                <input type="text" class="form-input form-input--md form-input--darker" placeholder="E-mail" name="email">
 
                 <input type="hidden" name="title" value="Форма для вопросов, в конце">
 
@@ -660,11 +763,11 @@
     <form class="b-order-form b-order-form--modal b-form">
         <h2 class="b-order-form__heading">Оставьте Ваши контакты,<br>и наш менеджер свяжется с Вами<br>в течение 4 часов</h2>
 
-        <input type="text" class="form-input form-input--md" placeholder="Ваше имя" name="name">
+        <input type="text" class="form-input form-input--md form-input--light" placeholder="Ваше имя" name="name">
 
-        <input type="text" class="form-input form-input--md" placeholder="Телефон" name="phone">
+        <input type="text" class="form-input form-input--md form-input--light" placeholder="Телефон" name="phone">
 
-        <input type="text" class="form-input form-input--md" placeholder="E-mail" name="email">
+        <input type="text" class="form-input form-input--md form-input--light" placeholder="E-mail" name="email">
 
         <input type="hidden" name="title" value="">
 
@@ -712,6 +815,14 @@
             интересы третьих лиц; вся предоставленная информация заполнена
             Гражданином в отношении себя лично
         </p>
+    </div>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <div class="b-set-location">
+        <input type="text" class="form-input form-input--md form-input--light" placeholder="Введите свой город" name="city">
+
+        <button type="button" class="btn btn--submit btn--md">Сохранить</button>
     </div>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
