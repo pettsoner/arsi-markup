@@ -215,7 +215,7 @@ $(window).load(function() {
     /* Слайдер заведений
     ------------------------------------------------------------------------------- */
 
-    /*var $bPlacesSlider = $('.b-places__slider');
+    var $bPlacesSlider = $('.b-places__slider');
 
     if ($bPlacesSlider.length) {
         var placesSlider = new Sly($bPlacesSlider.find('.b-places__slider__wrapper'), {
@@ -227,7 +227,7 @@ $(window).load(function() {
             nextPage: $bPlacesSlider.find('.b-pagination__next'),
             prevPage: $bPlacesSlider.find('.b-pagination__prev'),
         }).init();
-    }*/
+    }
 
     /* Установка высоты слайдеров
     ------------------------------------------------------------------------------- */
